@@ -121,7 +121,7 @@ p {
 }
 
 .logo-image {
-    height: 40px;
+    height: 60px;
     width: auto;
     transition: transform 0.3s ease;
 }
@@ -277,25 +277,37 @@ section {
 
 .about-content {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: start;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-.about-text h3 {
+.about-section {
+    text-align: left;
+}
+
+.about-section h3 {
     color: #eb8822;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1.6rem;
 }
 
-.about-text ul {
+.about-section ul {
     list-style: none;
     padding: 0;
 }
 
-.about-text li {
-    padding: 0.5rem 0;
+.about-section li {
+    padding: 0.8rem 0;
     color: #1d5f81;
+    border-bottom: 1px solid #f2f3f5;
+}
+
+.about-section li:last-child {
+    border-bottom: none;
 }
 
 /* Services Section */
@@ -725,7 +737,7 @@ section {
 /* Responsive Design */
 @media (max-width: 768px) {
     .logo-image {
-        height: 30px;
+        height: 45px;
     }
 
     .nav-menu {
@@ -812,7 +824,11 @@ section {
 
     .about-content {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 3rem;
+    }
+
+    .about-section h3 {
+        font-size: 1.4rem;
     }
 
     .contact-content {
