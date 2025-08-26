@@ -601,6 +601,111 @@ section {
     margin: 0;
 }
 
+/* Team Section */
+.team {
+    padding: 80px 0;
+    background-color: #f9f9fb;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.team-member {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(29, 95, 129, 0.1);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px rgba(29, 95, 129, 0.15);
+}
+
+.team-photo {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #eb8822;
+}
+
+.team-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.team-info h3 {
+    color: #eb8822;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.team-title {
+    color: #1d5f81;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.team-info p {
+    text-align: left;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.team-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: left;
+    border-top: 1px solid #f2f3f5;
+    padding-top: 1rem;
+}
+
+.team-contact a {
+    color: #eb8822;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.team-contact a:hover {
+    color: #1d5f81;
+}
+
+.team-contact span {
+    color: #1d5f81;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .team-member {
+        padding: 1.5rem;
+    }
+
+    .team-photo {
+        width: 150px;
+        height: 150px;
+    }
+}
+
 /* Animations */
 @keyframes fadeInUp {
     from {
