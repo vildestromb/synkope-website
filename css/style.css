@@ -458,32 +458,17 @@ section {
 
 /* Contact Section */
 .contact-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-}
-
-.contact-info {
     display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.contact-item h3 {
-    color: #eb8822;
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-}
-
-.contact-item p {
-    color: #1d5f81;
-    margin: 0;
+    justify-content: center;
+    align-items: center;
 }
 
 .contact-form {
     background: #f8f9fa;
     padding: 2rem;
     border-radius: 15px;
+    max-width: 600px;
+    width: 100%;
 }
 
 .form-group {
@@ -832,16 +817,11 @@ section {
     }
 
     .contact-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .contact-info {
-        order: 2;
+        padding: 0 1rem;
     }
 
     .contact-form {
-        order: 1;
+        max-width: none;
     }
 
     .services-grid {
