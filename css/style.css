@@ -332,61 +332,6 @@ section {
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
-.service-icon {
-    width: 60px;
-    height: 60px;
-    margin: 0 auto 1.5rem;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.service-card:nth-child(1) .service-icon {
-    background: linear-gradient(135deg, #eb8822 0%, #d67316 100%);
-}
-
-.service-card:nth-child(1) .service-icon::after {
-    content: "IT";
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: white;
-}
-
-.service-card:nth-child(2) .service-icon {
-    background: linear-gradient(135deg, #1d5f81 0%, #164a67 100%);
-}
-
-.service-card:nth-child(2) .service-icon::after {
-    content: "PM";
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: white;
-}
-
-.service-card:nth-child(3) .service-icon {
-    background: linear-gradient(135deg, #eb8822 0%, #d67316 100%);
-}
-
-.service-card:nth-child(3) .service-icon::after {
-    content: "SEC";
-    font-size: 1rem;
-    font-weight: bold;
-    color: white;
-}
-
-.service-card:nth-child(4) .service-icon {
-    background: linear-gradient(135deg, #1d5f81 0%, #164a67 100%);
-}
-
-.service-card:nth-child(4) .service-icon::after {
-    content: "EMC";
-    font-size: 1rem;
-    font-weight: bold;
-    color: white;
-}
-
 .service-card h3 {
     color: #eb8822;
     margin-bottom: 1rem;
