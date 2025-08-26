@@ -694,15 +694,29 @@ section {
     .team-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
+        margin-top: 2rem;
     }
 
     .team-member {
         padding: 1.5rem;
+        margin: 0 1rem;
     }
 
     .team-photo {
         width: 150px;
         height: 150px;
+    }
+
+    .team-contact {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: space-between;
+    }
+
+    .team-contact a,
+    .team-contact span {
+        font-size: 0.9rem;
     }
 }
 
@@ -746,14 +760,28 @@ section {
         transition: 0.3s;
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
         padding: 2rem 0;
+        z-index: 1001;
     }
 
     .nav-menu.active {
         left: 0;
     }
 
+    .nav-link {
+        padding: 1rem 0;
+        font-size: 1.1rem;
+        border-bottom: 1px solid #f2f3f5;
+        width: 100%;
+        display: block;
+    }
+
+    .nav-link:last-child {
+        border-bottom: none;
+    }
+
     .hamburger {
         display: flex;
+        z-index: 1002;
     }
 
     .hamburger.active .bar:nth-child(2) {
@@ -768,17 +796,27 @@ section {
         transform: translateY(-8px) rotate(-45deg);
     }
 
+    .container {
+        padding: 0 20px;
+    }
+
     h1 {
         font-size: 2.5rem;
+        line-height: 1.2;
     }
 
     h2 {
         font-size: 2rem;
     }
 
+    .hero {
+        padding: 120px 0 80px;
+    }
+
     .hero-container {
         grid-template-columns: 1fr;
         text-align: center;
+        gap: 2rem;
     }
 
     .hero-buttons {
@@ -790,6 +828,7 @@ section {
     .hero-buttons .btn {
         width: 100%;
         max-width: 300px;
+        padding: 15px 30px;
     }
 
     .about-content {
@@ -800,6 +839,12 @@ section {
     .about-stats {
         flex-direction: row;
         justify-content: space-around;
+        margin-top: 2rem;
+    }
+
+    .stat {
+        text-align: center;
+        min-width: 100px;
     }
 
     .contact-content {
@@ -807,8 +852,22 @@ section {
         gap: 2rem;
     }
 
+    .contact-info {
+        order: 2;
+    }
+
+    .contact-form {
+        order: 1;
+    }
+
     .services-grid {
         grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .service-card {
+        text-align: center;
+        padding: 2rem 1.5rem;
     }
 
     .portfolio-grid {
@@ -817,6 +876,14 @@ section {
 
     section {
         padding: 60px 0;
+    }
+
+    .section-header {
+        margin-bottom: 2rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.8rem;
     }
 }
 
@@ -827,10 +894,23 @@ section {
 
     h1 {
         font-size: 2rem;
+        line-height: 1.1;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
     }
 
     .hero {
         padding: 100px 0 60px;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
     }
 
     .service-card,
@@ -838,8 +918,69 @@ section {
         padding: 1.5rem;
     }
 
+    .team-member {
+        padding: 1.2rem;
+        margin: 0 0.5rem;
+    }
+
+    .team-photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .team-contact {
+        flex-direction: column;
+        gap: 0.8rem;
+        align-items: flex-start;
+    }
+
+    .team-contact a,
+    .team-contact span {
+        font-size: 0.85rem;
+    }
+
     .about-stats {
         flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .stat h3 {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+    }
+
+    section {
+        padding: 50px 0;
+    }
+
+    .navbar {
+        height: 60px;
+    }
+
+    .nav-menu {
+        top: 60px;
+    }
+}
+
+/* Touch improvements */
+@media (hover: none) and (pointer: coarse) {
+    .btn:hover,
+    .nav-link:hover,
+    .team-member:hover {
+        transform: none;
+    }
+
+    .btn:active {
+        transform: scale(0.98);
+    }
+
+    .team-contact a {
+        padding: 0.5rem 0;
+        display: block;
     }
 }
 
