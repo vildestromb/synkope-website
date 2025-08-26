@@ -2,6 +2,8 @@
 
 A modern, responsive website for Synkope consulting company, built as a single-page application with pure HTML, CSS, and JavaScript.
 
+🌐 **Live Demo**: [https://vildestromb.github.io/synkope-website/](https://vildestromb.github.io/synkope-website/)
+
 ## 🚀 About the Project
 
 Synkope is a consulting company that offers expertise in:
@@ -69,9 +71,14 @@ synkope/
 
 ## 🚀 Getting Started
 
+### View Live Site
+Visit the live website: **[https://vildestromb.github.io/synkope-website/](https://vildestromb.github.io/synkope-website/)**
+
+### Local Development
+
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/[your-username]/synkope-website.git
+   git clone https://github.com/vildestromb/synkope-website.git
    cd synkope-website
    ```
 
