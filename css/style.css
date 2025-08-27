@@ -435,7 +435,7 @@ section {
     top: 0;
     left: 0;
     right: 0;
-    height: 3px;
+    height: 2px;
     background: linear-gradient(90deg, #ff9f50 0%, #ffb366 50%, #ff9f50 100%);
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -449,7 +449,7 @@ section {
 }
 
 .service-card:hover::before {
-    opacity: 1;
+    opacity: 0.6;
 }
 
 .service-card h3 {
