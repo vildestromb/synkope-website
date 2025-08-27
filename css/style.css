@@ -620,6 +620,18 @@ section {
     color: #eb8822;
 }
 
+/* Footer email links styling */
+.footer-section a[href^="mailto:"] {
+    color: #eb8822;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a[href^="mailto:"]:hover {
+    color: #f39c42;
+    text-decoration: underline;
+}
+
 .social-links {
     display: flex;
     gap: 1rem;
