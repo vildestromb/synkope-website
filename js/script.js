@@ -16,6 +16,47 @@ navLinks.forEach((link) => {
   });
 });
 
+// Dropdown menu functionality
+const dropdown = document.querySelector(".nav-dropdown");
+const dropdownToggle = document.querySelector(".nav-dropdown-toggle");
+const dropdownMenu = document.querySelector(".nav-dropdown-menu");
+
+if (dropdown && dropdownToggle && dropdownMenu) {
+  // Toggle dropdown on click
+  dropdownToggle.addEventListener("click", (e) => {
+    e.preventDefault();
+    dropdown.classList.toggle("active");
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!dropdown.contains(e.target)) {
+      dropdown.classList.remove("active");
+    }
+  });
+
+  // Close dropdown when clicking on dropdown links
+  const dropdownLinks = document.querySelectorAll(".nav-dropdown-link");
+  dropdownLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      dropdown.classList.remove("active");
+    });
+  });
+
+  // Handle hover for desktop
+  dropdown.addEventListener("mouseenter", () => {
+    if (window.innerWidth > 768) {
+      dropdown.classList.add("active");
+    }
+  });
+
+  dropdown.addEventListener("mouseleave", () => {
+    if (window.innerWidth > 768) {
+      dropdown.classList.remove("active");
+    }
+  });
+}
+
 // Navbar scroll effect
 const navbar = document.querySelector(".navbar");
 
