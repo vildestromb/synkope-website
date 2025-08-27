@@ -632,25 +632,9 @@ section {
 
 /* Footer */
 .footer {
-    background: linear-gradient(135deg, #3e2c50 0%, #5f1d81 50%, #495e34 100%);
+    background: #2c3e50;
     color: white;
     padding: 3rem 0 1rem;
-    position: relative;
-}
-
-.footer::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: linear-gradient(
-        90deg,
-        transparent 0%,
-        #ff9f50 50%,
-        transparent 100%
-    );
 }
 
 .footer-content {
