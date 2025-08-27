@@ -588,12 +588,10 @@ section {
 }
 
 .footer-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    display: block;
     margin-bottom: 2rem;
-    max-width: 800px;
-    margin: 0 auto 2rem auto;
+    max-width: 400px;
+    margin: 0 0 2rem 0;
 }
 
 .footer-section h3,
@@ -1342,9 +1340,7 @@ section {
     }
 
     .footer-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        text-align: center;
+        text-align: left;
         max-width: 100%;
     }
 }
