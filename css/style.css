@@ -421,20 +421,23 @@ section {
 
 .service-link {
     display: inline-block;
-    color: #eb8822;
+    color: #1d5f81;
     text-decoration: none;
-    font-weight: 600;
-    padding: 0.5rem 1rem;
-    border: 2px solid #eb8822;
-    border-radius: 6px;
+    font-weight: 400;
+    padding: 0.3rem 0;
+    border: none;
+    border-bottom: 1px solid transparent;
+    border-radius: 0;
     transition: all 0.3s ease;
     margin-top: auto;
+    font-size: 0.9rem;
 }
 
 .service-link:hover {
-    background: #eb8822;
-    color: white;
-    transform: translateY(-2px);
+    color: #eb8822;
+    border-bottom-color: #eb8822;
+    background: transparent;
+    transform: none;
 }
 
 .service-card {
@@ -620,14 +623,16 @@ section {
     color: #eb8822;
 }
 
-/* Footer email links styling */
-.footer-section a[href^="mailto:"] {
+/* Footer email and phone links styling */
+.footer-section a[href^="mailto:"],
+.footer-section a[href^="tel:"] {
     color: #eb8822;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-.footer-section a[href^="mailto:"]:hover {
+.footer-section a[href^="mailto:"]:hover,
+.footer-section a[href^="tel:"]:hover {
     color: #f39c42;
     text-decoration: underline;
 }
