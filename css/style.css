@@ -733,7 +733,7 @@ section {
 /* Team Section */
 .team {
     padding: 80px 0;
-    background: linear-gradient(135deg, #fcf8fb 0%, #fcf2f7 50%, #ffffff 100%);
+    background: linear-gradient(135deg, #fcf8f0 0%, #fcf5e8 50%, #ffffff 100%);
 }
 
 .team-grid {
@@ -754,7 +754,7 @@ section {
 }
 
 .team-member {
-    background: linear-gradient(145deg, #ffffff 0%, #fefbfd 100%);
+    background: linear-gradient(145deg, #ffffff 0%, #fefcf8 100%);
     border-radius: 12px;
     padding: 2rem;
     box-shadow:
