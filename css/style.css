@@ -33,7 +33,7 @@ h6 {
     font-weight: 600;
     line-height: 1.2;
     margin-bottom: 1rem;
-    color: #eb8822;
+    color: #ff9f50;
 }
 
 h1 {
@@ -74,7 +74,7 @@ p {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #eb8822 0%, #d67316 100%);
+    background: linear-gradient(135deg, #ff9f50 0%, #e8873d 100%);
     color: white;
 }
 
@@ -85,12 +85,12 @@ p {
 
 .btn-secondary {
     background: transparent;
-    color: #eb8822;
-    border: 2px solid #eb8822;
+    color: #ff9f50;
+    border: 2px solid #ff9f50;
 }
 
 .btn-secondary:hover {
-    background: #eb8822;
+    background: #ff9f50;
     color: white;
     transform: translateY(-2px);
 }
@@ -136,7 +136,7 @@ p {
 }
 
 .nav-logo h2 {
-    color: #eb8822;
+    color: #ff9f50;
     margin: 0;
     font-size: 1.8rem;
 }
@@ -197,7 +197,7 @@ p {
 
 .nav-dropdown-link:hover {
     background: #f5f7fa;
-    color: #eb8822;
+    color: #ff9f50;
     padding-left: 2rem;
 }
 
@@ -216,7 +216,7 @@ p {
 }
 
 .nav-link:hover {
-    color: #eb8822;
+    color: #ff9f50;
 }
 
 .nav-link::after {
@@ -226,7 +226,7 @@ p {
     left: 0;
     width: 0;
     height: 2px;
-    background: #eb8822;
+    background: #ff9f50;
     transition: width 0.3s ease;
 }
 
@@ -235,7 +235,7 @@ p {
 }
 
 .nav-link.active {
-    color: #eb8822;
+    color: #ff9f50;
 }
 
 .nav-link.active::after {
@@ -264,10 +264,10 @@ p {
     align-items: center;
     background: linear-gradient(
         135deg,
-        #f5f7fa 0%,
-        #e8f2f8 30%,
-        #dae9f4 70%,
-        #c3cfe2 100%
+        #faf8f5 0%,
+        #f8f2e8 30%,
+        #f4e9da 70%,
+        #e2cfc3 100%
     );
     position: relative;
     overflow: hidden;
@@ -282,7 +282,7 @@ p {
     bottom: 0;
     background: radial-gradient(
         circle at 80% 20%,
-        rgba(235, 136, 34, 0.06) 0%,
+        rgba(255, 165, 80, 0.12) 0%,
         transparent 60%
     );
     pointer-events: none;
@@ -303,7 +303,7 @@ p {
 }
 
 .hero-title {
-    color: #eb8822;
+    color: #ff9f50;
     margin-bottom: 1.5rem;
     animation: fadeInUp 1s ease;
 }
@@ -328,7 +328,7 @@ p {
 .hero-placeholder {
     width: 100%;
     height: 400px;
-    background: linear-gradient(135deg, #eb8822 0%, #1d5f81 100%);
+    background: linear-gradient(135deg, #ff9f50 0%, #1d5f81 100%);
     border-radius: 20px;
     position: relative;
     overflow: hidden;
@@ -356,7 +356,7 @@ section {
 }
 
 .section-header h2 {
-    color: #eb8822;
+    color: #ff9f50;
     margin-bottom: 1rem;
 }
 
@@ -370,7 +370,7 @@ section {
 /* About Section */
 .about {
     padding: 80px 0;
-    background: linear-gradient(135deg, #f8f9fb 0%, #ffffff 50%, #f2f7fc 100%);
+    background: linear-gradient(135deg, #fbf9f8 0%, #ffffff 50%, #fcf7f2 100%);
 }
 
 .about-content {
@@ -387,7 +387,7 @@ section {
 }
 
 .about-section h3 {
-    color: #eb8822;
+    color: #ff9f50;
     margin-bottom: 1.5rem;
     text-align: center;
     font-size: 1.6rem;
@@ -416,15 +416,15 @@ section {
 }
 
 .service-card {
-    background: linear-gradient(145deg, #ffffff 0%, #fdfdfe 100%);
+    background: linear-gradient(145deg, #ffffff 0%, #fefcfb 100%);
     padding: 2.5rem;
     border-radius: 15px;
     box-shadow:
         0 8px 25px rgba(29, 95, 129, 0.08),
-        0 3px 10px rgba(235, 136, 34, 0.05);
+        0 3px 10px rgba(255, 165, 80, 0.08);
     text-align: center;
     transition: all 0.3s ease;
-    border: 1px solid rgba(235, 136, 34, 0.1);
+    border: 1px solid rgba(255, 165, 80, 0.15);
     position: relative;
     overflow: hidden;
 }
@@ -436,7 +436,7 @@ section {
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, #eb8822 0%, #f4a442 50%, #eb8822 100%);
+    background: linear-gradient(90deg, #ff9f50 0%, #ffb366 50%, #ff9f50 100%);
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -445,7 +445,7 @@ section {
     transform: translateY(-10px);
     box-shadow:
         0 20px 50px rgba(29, 95, 129, 0.15),
-        0 8px 25px rgba(235, 136, 34, 0.1);
+        0 8px 25px rgba(255, 165, 80, 0.15);
 }
 
 .service-card:hover::before {
@@ -453,7 +453,7 @@ section {
 }
 
 .service-card h3 {
-    color: #eb8822;
+    color: #ff9f50;
     margin-bottom: 1rem;
     font-size: 1.5rem;
 }
@@ -480,8 +480,8 @@ section {
 }
 
 .service-link:hover {
-    color: #eb8822;
-    border-bottom-color: #eb8822;
+    color: #ff9f50;
+    border-bottom-color: #ff9f50;
     background: transparent;
     transform: none;
 }
@@ -561,7 +561,7 @@ section {
 }
 
 .portfolio-content h3 {
-    color: #eb8822;
+    color: #ff9f50;
     margin-bottom: 0.5rem;
 }
 
@@ -578,7 +578,7 @@ section {
 
 .portfolio-tags span {
     background: #fef3e8;
-    color: #eb8822;
+    color: #ff9f50;
     padding: 0.25rem 0.75rem;
     border-radius: 20px;
     font-size: 0.85rem;
@@ -593,15 +593,15 @@ section {
 }
 
 .contact-form {
-    background: linear-gradient(145deg, #f8f9fa 0%, #ffffff 100%);
+    background: linear-gradient(145deg, #faf9f8 0%, #ffffff 100%);
     padding: 2rem;
     border-radius: 15px;
     max-width: 600px;
     width: 100%;
     box-shadow:
         0 6px 25px rgba(29, 95, 129, 0.08),
-        0 2px 10px rgba(235, 136, 34, 0.05);
-    border: 1px solid rgba(235, 136, 34, 0.1);
+        0 2px 10px rgba(255, 165, 80, 0.08);
+    border: 1px solid rgba(255, 165, 80, 0.15);
 }
 
 .form-group {
@@ -622,7 +622,7 @@ section {
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #eb8822;
+    border-color: #ff9f50;
 }
 
 .form-group textarea {
@@ -632,7 +632,7 @@ section {
 
 /* Footer */
 .footer {
-    background: linear-gradient(135deg, #2c3e50 0%, #1d5f81 50%, #34495e 100%);
+    background: linear-gradient(135deg, #3e2c50 0%, #5f1d81 50%, #495e34 100%);
     color: white;
     padding: 3rem 0 1rem;
     position: relative;
@@ -648,7 +648,7 @@ section {
     background: linear-gradient(
         90deg,
         transparent 0%,
-        #eb8822 50%,
+        #ff9f50 50%,
         transparent 100%
     );
 }
@@ -692,14 +692,14 @@ section {
 /* Footer email and phone links styling */
 .footer-section a[href^="mailto:"],
 .footer-section a[href^="tel:"] {
-    color: #eb8822;
+    color: #ff9f50;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer-section a[href^="mailto:"]:hover,
 .footer-section a[href^="tel:"]:hover {
-    color: #f39c42;
+    color: #ffb366;
     text-decoration: underline;
 }
 
@@ -733,7 +733,7 @@ section {
 /* Team Section */
 .team {
     padding: 80px 0;
-    background: linear-gradient(135deg, #f8fbfc 0%, #f2f7fc 50%, #ffffff 100%);
+    background: linear-gradient(135deg, #fcf8fb 0%, #fcf2f7 50%, #ffffff 100%);
 }
 
 .team-grid {
@@ -754,24 +754,24 @@ section {
 }
 
 .team-member {
-    background: linear-gradient(145deg, #ffffff 0%, #fdfdfe 100%);
+    background: linear-gradient(145deg, #ffffff 0%, #fefbfd 100%);
     border-radius: 12px;
     padding: 2rem;
     box-shadow:
         0 6px 25px rgba(29, 95, 129, 0.12),
-        0 2px 10px rgba(235, 136, 34, 0.05);
+        0 2px 10px rgba(255, 165, 80, 0.08);
     transition:
         transform 0.3s ease,
         box-shadow 0.3s ease;
     text-align: center;
-    border: 1px solid rgba(235, 136, 34, 0.08);
+    border: 1px solid rgba(255, 165, 80, 0.12);
 }
 
 .team-member:hover {
     transform: translateY(-5px);
     box-shadow:
         0 15px 45px rgba(29, 95, 129, 0.18),
-        0 5px 20px rgba(235, 136, 34, 0.08);
+        0 5px 20px rgba(255, 165, 80, 0.12);
 }
 
 .team-photo {
@@ -819,7 +819,7 @@ section {
 }
 
 .team-contact a {
-    color: #eb8822;
+    color: #ff9f50;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
@@ -1148,7 +1148,7 @@ section {
 /* Service Pages Styles */
 .service-hero {
     padding: 140px 0 80px;
-    background: linear-gradient(135deg, #f5f7fa 0%, #e8f2f8 50%, #c3cfe2 100%);
+    background: linear-gradient(135deg, #faf7f5 0%, #f8f2e8 50%, #e2d5c3 100%);
     position: relative;
     overflow: hidden;
 }
@@ -1162,7 +1162,7 @@ section {
     bottom: 0;
     background: radial-gradient(
         circle at 70% 30%,
-        rgba(235, 136, 34, 0.08) 0%,
+        rgba(255, 165, 80, 0.15) 0%,
         transparent 50%
     );
     pointer-events: none;
@@ -1176,7 +1176,7 @@ section {
 
 .service-hero h1 {
     font-size: 3rem;
-    color: #eb8822;
+    color: #ff9f50;
     margin-bottom: 1.5rem;
 }
 
