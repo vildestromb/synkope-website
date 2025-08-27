@@ -262,7 +262,30 @@ p {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: linear-gradient(
+        135deg,
+        #f5f7fa 0%,
+        #e8f2f8 30%,
+        #dae9f4 70%,
+        #c3cfe2 100%
+    );
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+        circle at 80% 20%,
+        rgba(235, 136, 34, 0.06) 0%,
+        transparent 60%
+    );
+    pointer-events: none;
 }
 
 .hero-container {
@@ -346,7 +369,8 @@ section {
 
 /* About Section */
 .about {
-    background: #f8f9fa;
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f8f9fb 0%, #ffffff 50%, #f2f7fc 100%);
 }
 
 .about-content {
@@ -392,18 +416,40 @@ section {
 }
 
 .service-card {
-    background: white;
+    background: linear-gradient(145deg, #ffffff 0%, #fdfdfe 100%);
     padding: 2.5rem;
     border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    box-shadow:
+        0 8px 25px rgba(29, 95, 129, 0.08),
+        0 3px 10px rgba(235, 136, 34, 0.05);
     text-align: center;
     transition: all 0.3s ease;
-    border: 1px solid #f0f0f0;
+    border: 1px solid rgba(235, 136, 34, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #eb8822 0%, #f4a442 50%, #eb8822 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .service-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    box-shadow:
+        0 20px 50px rgba(29, 95, 129, 0.15),
+        0 8px 25px rgba(235, 136, 34, 0.1);
+}
+
+.service-card:hover::before {
+    opacity: 1;
 }
 
 .service-card h3 {
@@ -547,11 +593,15 @@ section {
 }
 
 .contact-form {
-    background: #f8f9fa;
+    background: linear-gradient(145deg, #f8f9fa 0%, #ffffff 100%);
     padding: 2rem;
     border-radius: 15px;
     max-width: 600px;
     width: 100%;
+    box-shadow:
+        0 6px 25px rgba(29, 95, 129, 0.08),
+        0 2px 10px rgba(235, 136, 34, 0.05);
+    border: 1px solid rgba(235, 136, 34, 0.1);
 }
 
 .form-group {
@@ -582,9 +632,25 @@ section {
 
 /* Footer */
 .footer {
-    background: #2c3e50;
+    background: linear-gradient(135deg, #2c3e50 0%, #1d5f81 50%, #34495e 100%);
     color: white;
     padding: 3rem 0 1rem;
+    position: relative;
+}
+
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        #eb8822 50%,
+        transparent 100%
+    );
 }
 
 .footer-content {
@@ -667,7 +733,7 @@ section {
 /* Team Section */
 .team {
     padding: 80px 0;
-    background-color: #f9f9fb;
+    background: linear-gradient(135deg, #f8fbfc 0%, #f2f7fc 50%, #ffffff 100%);
 }
 
 .team-grid {
@@ -688,19 +754,24 @@ section {
 }
 
 .team-member {
-    background: white;
+    background: linear-gradient(145deg, #ffffff 0%, #fdfdfe 100%);
     border-radius: 12px;
     padding: 2rem;
-    box-shadow: 0 4px 20px rgba(29, 95, 129, 0.1);
+    box-shadow:
+        0 6px 25px rgba(29, 95, 129, 0.12),
+        0 2px 10px rgba(235, 136, 34, 0.05);
     transition:
         transform 0.3s ease,
         box-shadow 0.3s ease;
     text-align: center;
+    border: 1px solid rgba(235, 136, 34, 0.08);
 }
 
 .team-member:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 40px rgba(29, 95, 129, 0.15);
+    box-shadow:
+        0 15px 45px rgba(29, 95, 129, 0.18),
+        0 5px 20px rgba(235, 136, 34, 0.08);
 }
 
 .team-photo {
@@ -1077,7 +1148,24 @@ section {
 /* Service Pages Styles */
 .service-hero {
     padding: 140px 0 80px;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8f2f8 50%, #c3cfe2 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.service-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+        circle at 70% 30%,
+        rgba(235, 136, 34, 0.08) 0%,
+        transparent 50%
+    );
+    pointer-events: none;
 }
 
 .service-hero-content {
