@@ -874,7 +874,7 @@ section {
 /* Responsive Design */
 @media (max-width: 768px) {
     .logo-image {
-        height: 45px;
+        height: 35px;
     }
 
     .nav-menu {
@@ -1085,12 +1085,16 @@ section {
     }
 
     .navbar {
-        height: 65px;
-        padding: 0.5rem 0;
+        height: 55px;
+        padding: 0.25rem 0;
+    }
+
+    .logo-image {
+        height: 30px;
     }
 
     .nav-menu {
-        top: 60px;
+        top: 55px;
     }
 }
 
