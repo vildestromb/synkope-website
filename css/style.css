@@ -74,7 +74,7 @@ p {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #ff9f50 0%, #e8873d 100%);
+    background: #ff9f50;
     color: white;
 }
 
