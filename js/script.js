@@ -292,16 +292,16 @@ function typeWriter(element, text, speed = 100) {
   type();
 }
 
-// Initialize typing effect when page loads
-document.addEventListener("DOMContentLoaded", () => {
-  const heroTitle = document.querySelector(".hero-title");
-  if (heroTitle) {
-    const originalText = heroTitle.textContent;
-    setTimeout(() => {
-      typeWriter(heroTitle, originalText, 80);
-    }, 1000);
-  }
-});
+// Initialize typing effect when page loads - DISABLED
+// document.addEventListener("DOMContentLoaded", () => {
+//   const heroTitle = document.querySelector(".hero-title");
+//   if (heroTitle) {
+//     const originalText = heroTitle.textContent;
+//     setTimeout(() => {
+//       typeWriter(heroTitle, originalText, 80);
+//     }, 1000);
+//   }
+// });
 
 // Counter animation for statistics
 function animateCounter(element, target, duration = 2000) {
