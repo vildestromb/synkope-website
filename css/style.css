@@ -1138,7 +1138,7 @@ section {
 
 /* Service Pages Styles */
 .service-hero {
-    padding: 140px 0 80px;
+    padding: 140px 0 30px;
     background: linear-gradient(135deg, #faf7f5 0%, #f8f2e8 50%, #e2d5c3 100%);
     position: relative;
     overflow: hidden;
@@ -1178,7 +1178,7 @@ section {
 }
 
 .service-content {
-    padding: 80px 0;
+    padding: 30px 0 80px;
 }
 
 .service-main {
@@ -1296,11 +1296,15 @@ section {
 /* Mobile styles for service pages */
 @media (max-width: 768px) {
     .service-hero {
-        padding: 105px 0 60px;
+        padding: 105px 0 20px;
     }
 
     .service-hero h1 {
         font-size: 2rem;
+    }
+
+    .service-content {
+        padding: 20px 0 60px;
     }
 
     .service-main {
