@@ -152,14 +152,20 @@ if (contactForm) {
     const emne = formData.get("emne");
     const melding = formData.get("melding");
 
-    // Basic validation
-    if (!navn || !epost || !emne || !melding) {
-      showMessage("Vennligst fyll ut alle feltene.", "error");
-      return;
-    }
+    // Enhanced validation
+    const validationResult = validateForm({ navn, epost, emne, melding });
 
-    if (!isValidEmail(epost)) {
-      showMessage("Vennligst skriv inn en gyldig e-postadresse.", "error");
+    if (!validationResult.isValid) {
+      showMessage(validationResult.message, "error");
+      // Focus on the first invalid field
+      if (validationResult.field) {
+        const field = document.getElementById(validationResult.field);
+        if (field) {
+          field.focus();
+          field.classList.add("error");
+          setTimeout(() => field.classList.remove("error"), 3000);
+        }
+      }
       return;
     }
 
@@ -185,9 +191,47 @@ if (contactForm) {
 }
 
 // Email validation function
+// Enhanced form validation
+function validateForm({ navn, epost, emne, melding }) {
+  // Check for empty fields
+  if (!navn || navn.trim().length < 2) {
+    return {
+      isValid: false,
+      message: "Navn må være minst 2 tegn langt.",
+      field: "navn"
+    };
+  }
+
+  if (!epost || !isValidEmail(epost)) {
+    return {
+      isValid: false,
+      message: "Vennligst skriv inn en gyldig e-postadresse.",
+      field: "epost"
+    };
+  }
+
+  if (!emne || emne.trim().length < 3) {
+    return {
+      isValid: false,
+      message: "Emne må være minst 3 tegn langt.",
+      field: "emne"
+    };
+  }
+
+  if (!melding || melding.trim().length < 10) {
+    return {
+      isValid: false,
+      message: "Melding må være minst 10 tegn lang.",
+      field: "melding"
+    };
+  }
+
+  return { isValid: true };
+}
+
 function isValidEmail(email) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
+  return emailRegex.test(email.trim());
 }
 
 // Show message function

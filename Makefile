@@ -10,7 +10,7 @@ PACKAGE_JSON = package.json
 .DEFAULT_GOAL := help
 
 # Phony targets (targets that don't create files)
-.PHONY: help install lint lint-fix serve clean dev test cleanup
+.PHONY: help install lint lint-fix serve clean dev test cleanup optimize minify audit
 
 # Help target - displays available commands
 help:
@@ -20,6 +20,9 @@ help:
 	@echo "  make lint       - Run ESLint on JavaScript files"
 	@echo "  make lint-fix   - Run ESLint and automatically fix issues"
 	@echo "  make cleanup    - Remove unused functions and clean up code"
+	@echo "  make optimize   - Optimize images and minify assets"
+	@echo "  make minify     - Minify CSS and JavaScript files"
+	@echo "  make audit      - Run performance audit with Lighthouse"
 	@echo "  make serve      - Start local development server on port $(PORT)"
 	@echo "  make dev        - Install dependencies and start development server"
 	@echo "  make clean      - Remove node_modules and package-lock.json"
@@ -54,7 +57,27 @@ cleanup:
 	@rm -f js/script.js.bak
 	@echo "Code cleanup completed. Run 'make lint' to verify."
 
-# Start local development server
+# Optimize images and minify assets
+optimize: minify
+	@echo "Optimizing images..."
+	@if command -v imageoptim > /dev/null 2>&1; then \
+		find images/ -name "*.jpg" -o -name "*.png" -o -name "*.gif" | xargs imageoptim; \
+	elif command -v optipng > /dev/null 2>&1 && command -v jpegoptim > /dev/null 2>&1; then \
+		find images/ -name "*.png" -exec optipng -o2 {} \; ; \
+		find images/ -name "*.jpg" -exec jpegoptim --max=85 {} \; ; \
+	else \
+		echo "No image optimization tool found. Install imageoptim, optipng, or jpegoptim."; \
+	fi
+
+# Minify CSS and JavaScript files
+minify:
+	@echo "Minifying CSS and JavaScript files..."
+	@if [ ! -d "dist" ]; then mkdir -p dist/css dist/js; fi
+	@if command -v cleancss > /dev/null 2>&1; then \
+		cleancss -o dist/css/style.min.css css/style.css; \
+		echo "CSS minified to dist/css/style.min.css"; \
+	else \
+		echo "clean-css not found. Run: npm install -ent server
 serve:
 	@echo "Starting local development server on http://localhost:$(PORT)..."
 	@echo "Press Ctrl+C to stop the server"
@@ -62,12 +85,10 @@ serve:
 		python3 -m http.server $(PORT); \
 	elif command -v python > /dev/null 2>&1; then \
 		python -m http.server $(PORT); \
-	elif command -v php > /dev/null 2>&1; then \
-		php -S localhost:$(PORT); \
 	elif npx serve --version > /dev/null 2>&1; then \
 		npx serve . -p $(PORT); \
 	else \
-		echo "Error: No suitable server found. Please install Python, PHP, or Node.js with 'serve' package."; \
+		echo "Error: No suitable server found. Please install Python or Node.js with 'serve' package."; \
 		exit 1; \
 	fi
 
