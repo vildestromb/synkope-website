@@ -23,7 +23,7 @@
     </head>
     <body>
         <!-- Navigation -->
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Main navigation">
             <div class="nav-container">
                 <div class="nav-logo">
                     <a href="#hjem">
@@ -69,7 +69,13 @@
                     </div>
                     <a href="#kontakt" class="nav-link">Kontakt</a>
                 </div>
-                <div class="hamburger">
+                <div
+                    class="hamburger"
+                    role="button"
+                    aria-label="Toggle mobile menu"
+                    aria-expanded="false"
+                    tabindex="0"
+                >
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -78,10 +84,10 @@
         </nav>
 
         <!-- Hero Section -->
-        <section id="hjem" class="hero">
+        <section id="hjem" class="hero" aria-labelledby="hero-title">
             <div class="hero-container">
                 <div class="hero-content">
-                    <h1 class="hero-title">
+                    <h1 id="hero-title" class="hero-title">
                         Erfarne rådgivere<br />
                         med spisskompetanse
                     </h1>
@@ -105,10 +111,10 @@
         </section>
 
         <!-- Om Oss Section -->
-        <section id="om" class="about">
+        <section id="om" class="about" aria-labelledby="about-heading">
             <div class="container">
                 <div class="section-header">
-                    <h2>Om Synkope</h2>
+                    <h2 id="about-heading">Om Synkope</h2>
                     <p>
                         Synkope består av erfarne rådgivere med ulike
                         kompetanseområder. Vi hjelper kunder i både privat og
@@ -242,10 +248,10 @@
         </section>
 
         <!-- Team Section -->
-        <section id="team" class="team">
+        <section id="team" class="team" aria-labelledby="team-heading">
             <div class="container">
                 <div class="section-header">
-                    <h2>Vårt team</h2>
+                    <h2 id="team-heading">Vårt team</h2>
                     <p>Møt våre erfarne rådgivere</p>
                 </div>
                 <div class="team-grid">
@@ -382,10 +388,14 @@
         </section>
 
         <!-- Tjenester Section -->
-        <section id="tjenester" class="services">
+        <section
+            id="tjenester"
+            class="services"
+            aria-labelledby="services-heading"
+        >
             <div class="container">
                 <div class="section-header">
-                    <h2>Våre tjenester</h2>
+                    <h2 id="services-heading">Våre tjenester</h2>
                     <p>Skreddersydde løsninger for komplekse utfordringer</p>
                 </div>
                 <div class="services-grid">
@@ -442,52 +452,63 @@
         </section>
 
         <!-- Kontakt Section -->
-        <section id="kontakt" class="contact">
+        <section id="kontakt" class="contact" aria-labelledby="contact-heading">
             <div class="container">
                 <div class="section-header">
-                    <h2>Kontakt</h2>
+                    <h2 id="contact-heading">Kontakt oss</h2>
                 </div>
                 <div class="contact-content">
                     <div class="contact-form">
-                        <form id="kontaktskjema">
+                        <form
+                            id="kontaktskjema"
+                            aria-labelledby="contact-heading"
+                        >
                             <div class="form-group">
+                                <label for="navn">Navn *</label>
                                 <input
                                     type="text"
                                     id="navn"
                                     name="navn"
-                                    placeholder="Navn"
+                                    placeholder="Ditt fulle navn"
                                     required
+                                    aria-required="true"
                                 />
                             </div>
                             <div class="form-group">
+                                <label for="epost">E-post *</label>
                                 <input
                                     type="email"
                                     id="epost"
                                     name="epost"
-                                    placeholder="E-post"
+                                    placeholder="din@epost.no"
                                     required
+                                    aria-required="true"
                                 />
                             </div>
                             <div class="form-group">
+                                <label for="emne">Emne *</label>
                                 <input
                                     type="text"
                                     id="emne"
                                     name="emne"
-                                    placeholder="Emne"
+                                    placeholder="Hva gjelder henvendelsen?"
                                     required
+                                    aria-required="true"
                                 />
                             </div>
                             <div class="form-group">
+                                <label for="melding">Melding *</label>
                                 <textarea
                                     id="melding"
                                     name="melding"
                                     rows="5"
-                                    placeholder="Melding"
+                                    placeholder="Beskriv din henvendelse..."
                                     required
+                                    aria-required="true"
                                 ></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary">
-                                Send Melding
+                                Send melding
                             </button>
                         </form>
                     </div>

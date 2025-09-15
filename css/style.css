@@ -617,6 +617,14 @@ section {
     margin-bottom: 1.5rem;
 }
 
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #1d5f81;
+    font-size: 0.9rem;
+}
+
 .form-group input,
 .form-group textarea {
     width: 100%;
