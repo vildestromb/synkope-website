@@ -54,8 +54,7 @@ The `make serve` command automatically detects and uses the best available serve
 
 1. **Python 3** (`python3 -m http.server`)
 2. **Python 2** (`python -m http.server`)
-3. **PHP** (`php -S localhost:8000`)
-4. **Node.js serve** (`npx serve`)
+3. **Node.js serve** (`npx serve`)
 
 The server runs on `http://localhost:8000` by default.
 
@@ -184,7 +183,6 @@ sudo yum install make                  # CentOS/RHEL
 Install one of the supported server options:
 
 - **Python**: Usually pre-installed on macOS/Linux
-- **PHP**: `brew install php` (macOS) or `sudo apt-get install php` (Linux)  
 - **Node.js**: Install from [nodejs.org](https://nodejs.org) and run `make install`
 
 ### ESLint errors
