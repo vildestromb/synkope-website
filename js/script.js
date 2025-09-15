@@ -1,3 +1,8 @@
+// Utility Functions
+function removeElementFocus(element) {
+  element.blur(); // Remove focus to prevent sticky border
+}
+
 // Mobile Navigation Toggle
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
@@ -10,10 +15,10 @@ hamburger.addEventListener("click", () => {
 
 // Close mobile menu when clicking on a link
 navLinks.forEach((link) => {
-  link.addEventListener("click", function () {
+  link.addEventListener("click", function() {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
-    this.blur(); // Remove focus to prevent sticky border
+    removeElementFocus(this);
   });
 });
 
@@ -42,9 +47,9 @@ if (dropdown && dropdownToggle && dropdownMenu) {
   // Close dropdown when clicking on dropdown links
   const dropdownLinks = document.querySelectorAll(".nav-dropdown-link");
   dropdownLinks.forEach((link) => {
-    link.addEventListener("click", function () {
+    link.addEventListener("click", function() {
       dropdown.classList.remove("active");
-      this.blur(); // Remove focus to prevent sticky border
+      removeElementFocus(this);
     });
   });
 
@@ -75,7 +80,7 @@ window.addEventListener("scroll", () => {
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
+  anchor.addEventListener("click", function(e) {
     e.preventDefault();
     const target = document.querySelector(this.getAttribute("href"));
 
@@ -87,10 +92,10 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 
       window.scrollTo({
         top: offsetPosition,
-        behavior: "smooth",
+        behavior: "smooth"
       });
     }
-    this.blur(); // Remove focus to prevent sticky border
+    removeElementFocus(this);
   });
 });
 
@@ -121,7 +126,7 @@ window.addEventListener("scroll", () => {
 // Fade in animation on scroll
 const observerOptions = {
   threshold: 0.1,
-  rootMargin: "0px 0px -50px 0px",
+  rootMargin: "0px 0px -50px 0px"
 };
 
 const observer = new IntersectionObserver((entries) => {
@@ -135,7 +140,7 @@ const observer = new IntersectionObserver((entries) => {
 // Add fade-in class to elements and observe them
 document.addEventListener("DOMContentLoaded", () => {
   const fadeElements = document.querySelectorAll(
-    ".service-card, .portfolio-item, .stat, .about-text, .contact-item",
+    ".service-card, .portfolio-item, .stat, .about-text, .contact-item"
   );
 
   fadeElements.forEach((el) => {
@@ -148,7 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const contactForm = document.getElementById("kontaktskjema");
 
 if (contactForm) {
-  contactForm.addEventListener("submit", function (e) {
+  contactForm.addEventListener("submit", function(e) {
     e.preventDefault();
 
     // Get form data
@@ -185,7 +190,7 @@ if (contactForm) {
     setTimeout(() => {
       showMessage(
         "Takk for din henvendelse! Vi kommer tilbake til deg så snart som mulig.",
-        "success",
+        "success"
       );
       this.reset();
 
@@ -204,7 +209,7 @@ function validateForm({ navn, epost, emne, melding }) {
     return {
       isValid: false,
       message: "Navn må være minst 2 tegn langt.",
-      field: "navn",
+      field: "navn"
     };
   }
 
@@ -212,7 +217,7 @@ function validateForm({ navn, epost, emne, melding }) {
     return {
       isValid: false,
       message: "Vennligst skriv inn en gyldig e-postadresse.",
-      field: "epost",
+      field: "epost"
     };
   }
 
@@ -220,7 +225,7 @@ function validateForm({ navn, epost, emne, melding }) {
     return {
       isValid: false,
       message: "Emne må være minst 3 tegn langt.",
-      field: "emne",
+      field: "emne"
     };
   }
 
@@ -228,7 +233,7 @@ function validateForm({ navn, epost, emne, melding }) {
     return {
       isValid: false,
       message: "Melding må være minst 10 tegn lang.",
-      field: "melding",
+      field: "melding"
     };
   }
 
@@ -267,7 +272,7 @@ function showMessage(message, type) {
 function scrollToTop() {
   window.scrollTo({
     top: 0,
-    behavior: "smooth",
+    behavior: "smooth"
   });
 }
 
@@ -343,7 +348,7 @@ const statsObserver = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.5 },
+  { threshold: 0.5 }
 );
 
 document.addEventListener("DOMContentLoaded", () => {
