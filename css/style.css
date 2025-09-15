@@ -708,6 +708,20 @@ section {
     border: 1px solid var(--primary-color);
 }
 
+/* Portfolio Image Gradients */
+.portfolio-image-gradient {
+    background: linear-gradient(
+        135deg,
+        var(--primary-color) 0%,
+        var(--secondary-color) 100%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: white;
+}
+
 /* Footer */
 .footer {
     background: #2c3e50;
