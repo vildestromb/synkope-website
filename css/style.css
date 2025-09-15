@@ -133,6 +133,16 @@ p {
     align-items: flex-end;
 }
 
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 0 20px;
+    }
+
+    .navbar {
+        padding: 1rem 0;
+    }
+}
+
 .nav-logo {
     display: flex;
     align-items: center;
@@ -1006,9 +1016,23 @@ section {
         border-bottom: 1px solid #f2f3f5;
         width: 100%;
         display: block;
+        text-align: center;
     }
 
-    .nav-link:last-child {
+    .nav-dropdown-toggle {
+        padding: 0.75rem 0;
+        font-size: 1.1rem;
+        width: 100%;
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        color: var(--text-color);
+        border: none;
+        background: none;
+    }
+
+    .nav-link:last-child,
+    .nav-dropdown-toggle {
         border-bottom: none;
     }
 
