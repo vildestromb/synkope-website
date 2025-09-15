@@ -73,27 +73,27 @@ optimize: minify
 minify:
 	@echo "Minifying CSS and JavaScript files..."
 	@if [ ! -d "dist" ]; then mkdir -p dist/css dist/js; fi
-	@if command -v cleancss > /dev/null 2>&1; then \
-		cleancss -o dist/css/style.min.css css/style.css; \
+	@if npx cleancss --version > /dev/null 2>&1; then \
+		npx cleancss -o dist/css/style.min.css css/style.css; \
 		echo "CSS minified to dist/css/style.min.css"; \
 	else \
-		echo "clean-css not found. Run: npm install -g clean-css-cli"; \
+		echo "clean-css-cli not found. Run: npm install"; \
 	fi
-	@if command -v uglifyjs > /dev/null 2>&1; then \
-		uglifyjs js/script.js -o dist/js/script.min.js -c -m; \
+	@if npx uglifyjs --version > /dev/null 2>&1; then \
+		npx uglifyjs js/script.js -o dist/js/script.min.js -c -m; \
 		echo "JavaScript minified to dist/js/script.min.js"; \
 	else \
-		echo "uglify-js not found. Run: npm install -g uglify-js"; \
+		echo "uglify-js not found. Run: npm install"; \
 	fi
 
 # Audit performance with Lighthouse
 audit:
 	@echo "Running Lighthouse performance audit..."
-	@if command -v lighthouse > /dev/null 2>&1; then \
-		lighthouse http://localhost:$(PORT) --only-categories=performance --output=html --output-path=./lighthouse-report.html; \
+	@if npx lighthouse --version > /dev/null 2>&1; then \
+		npx lighthouse http://localhost:$(PORT) --only-categories=performance --output=html --output-path=./lighthouse-report.html; \
 		echo "Lighthouse report saved to lighthouse-report.html"; \
 	else \
-		echo "Lighthouse not found. Run: npm install -g lighthouse"; \
+		echo "Lighthouse not found. Run: npm install"; \
 	fi
 
 # Start local development server
