@@ -77,7 +77,26 @@ minify:
 		cleancss -o dist/css/style.min.css css/style.css; \
 		echo "CSS minified to dist/css/style.min.css"; \
 	else \
-		echo "clean-css not found. Run: npm install -ent server
+		echo "clean-css not found. Run: npm install -g clean-css-cli"; \
+	fi
+	@if command -v uglifyjs > /dev/null 2>&1; then \
+		uglifyjs js/script.js -o dist/js/script.min.js -c -m; \
+		echo "JavaScript minified to dist/js/script.min.js"; \
+	else \
+		echo "uglify-js not found. Run: npm install -g uglify-js"; \
+	fi
+
+# Audit performance with Lighthouse
+audit:
+	@echo "Running Lighthouse performance audit..."
+	@if command -v lighthouse > /dev/null 2>&1; then \
+		lighthouse http://localhost:$(PORT) --only-categories=performance --output=html --output-path=./lighthouse-report.html; \
+		echo "Lighthouse report saved to lighthouse-report.html"; \
+	else \
+		echo "Lighthouse not found. Run: npm install -g lighthouse"; \
+	fi
+
+# Start local development server
 serve:
 	@echo "Starting local development server on http://localhost:$(PORT)..."
 	@echo "Press Ctrl+C to stop the server"

@@ -6,7 +6,11 @@
   "scripts": {
     "lint": "eslint js/**/*.js",
     "serve": "npx serve . -p 8000",
-    "dev": "npm run serve"
+    "dev": "npm run serve",
+    "minify:css": "cleancss -o dist/css/style.min.css css/style.css",
+    "minify:js": "uglifyjs js/script.js -o dist/js/script.min.js -c -m",
+    "minify": "mkdir -p dist/css dist/js && npm run minify:css && npm run minify:js",
+    "audit": "lighthouse http://localhost:8000 --only-categories=performance --output=html --output-path=./lighthouse-report.html"
   },
   "repository": {
     "type": "git",
@@ -23,7 +27,10 @@
   "private": true,
   "devDependencies": {
     "eslint": "^8.57.0",
-    "serve": "^14.2.1"
+    "serve": "^14.2.1",
+    "clean-css-cli": "^5.6.2",
+    "uglify-js": "^3.17.4",
+    "lighthouse": "^11.4.0"
   },
   "engines": {
     "node": ">=16.0.0"
