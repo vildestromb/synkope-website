@@ -70,7 +70,7 @@ window.addEventListener("scroll", () => {
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function(e) {
+  anchor.addEventListener("click", function (e) {
     e.preventDefault();
     const target = document.querySelector(this.getAttribute("href"));
 
@@ -82,7 +82,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 
       window.scrollTo({
         top: offsetPosition,
-        behavior: "smooth"
+        behavior: "smooth",
       });
     }
   });
@@ -115,7 +115,7 @@ window.addEventListener("scroll", () => {
 // Fade in animation on scroll
 const observerOptions = {
   threshold: 0.1,
-  rootMargin: "0px 0px -50px 0px"
+  rootMargin: "0px 0px -50px 0px",
 };
 
 const observer = new IntersectionObserver((entries) => {
@@ -129,7 +129,7 @@ const observer = new IntersectionObserver((entries) => {
 // Add fade-in class to elements and observe them
 document.addEventListener("DOMContentLoaded", () => {
   const fadeElements = document.querySelectorAll(
-    ".service-card, .portfolio-item, .stat, .about-text, .contact-item"
+    ".service-card, .portfolio-item, .stat, .about-text, .contact-item",
   );
 
   fadeElements.forEach((el) => {
@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const contactForm = document.getElementById("kontaktskjema");
 
 if (contactForm) {
-  contactForm.addEventListener("submit", function(e) {
+  contactForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
     // Get form data
@@ -179,7 +179,7 @@ if (contactForm) {
     setTimeout(() => {
       showMessage(
         "Takk for din henvendelse! Vi kommer tilbake til deg så snart som mulig.",
-        "success"
+        "success",
       );
       this.reset();
 
@@ -198,7 +198,7 @@ function validateForm({ navn, epost, emne, melding }) {
     return {
       isValid: false,
       message: "Navn må være minst 2 tegn langt.",
-      field: "navn"
+      field: "navn",
     };
   }
 
@@ -206,7 +206,7 @@ function validateForm({ navn, epost, emne, melding }) {
     return {
       isValid: false,
       message: "Vennligst skriv inn en gyldig e-postadresse.",
-      field: "epost"
+      field: "epost",
     };
   }
 
@@ -214,7 +214,7 @@ function validateForm({ navn, epost, emne, melding }) {
     return {
       isValid: false,
       message: "Emne må være minst 3 tegn langt.",
-      field: "emne"
+      field: "emne",
     };
   }
 
@@ -222,7 +222,7 @@ function validateForm({ navn, epost, emne, melding }) {
     return {
       isValid: false,
       message: "Melding må være minst 10 tegn lang.",
-      field: "melding"
+      field: "melding",
     };
   }
 
@@ -246,19 +246,6 @@ function showMessage(message, type) {
   const messageEl = document.createElement("div");
   messageEl.className = `form-message ${type}`;
   messageEl.textContent = message;
-  messageEl.style.cssText = `
-        padding: 1rem;
-        margin: 1rem 0;
-        border-radius: 8px;
-        font-weight: 500;
-        text-align: center;
-        ${
-  type === "success"
-    ? "background-color: #e8f5e8; color: #1d5f81; border: 1px solid #c3e6cb;"
-    : "background-color: #fef3e8; color: #b8441f; border: 1px solid #eb8822;"
-}
-    `;
-
   // Add message after form
   contactForm.appendChild(messageEl);
 
@@ -274,7 +261,7 @@ function showMessage(message, type) {
 function scrollToTop() {
   window.scrollTo({
     top: 0,
-    behavior: "smooth"
+    behavior: "smooth",
   });
 }
 
@@ -350,7 +337,7 @@ const statsObserver = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.5 }
+  { threshold: 0.5 },
 );
 
 document.addEventListener("DOMContentLoaded", () => {
