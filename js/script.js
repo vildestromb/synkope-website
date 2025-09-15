@@ -70,7 +70,7 @@ window.addEventListener("scroll", () => {
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
+  anchor.addEventListener("click", function(e) {
     e.preventDefault();
     const target = document.querySelector(this.getAttribute("href"));
 
@@ -82,7 +82,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 
       window.scrollTo({
         top: offsetPosition,
-        behavior: "smooth",
+        behavior: "smooth"
       });
     }
   });
@@ -115,7 +115,7 @@ window.addEventListener("scroll", () => {
 // Fade in animation on scroll
 const observerOptions = {
   threshold: 0.1,
-  rootMargin: "0px 0px -50px 0px",
+  rootMargin: "0px 0px -50px 0px"
 };
 
 const observer = new IntersectionObserver((entries) => {
@@ -129,7 +129,7 @@ const observer = new IntersectionObserver((entries) => {
 // Add fade-in class to elements and observe them
 document.addEventListener("DOMContentLoaded", () => {
   const fadeElements = document.querySelectorAll(
-    ".service-card, .portfolio-item, .stat, .about-text, .contact-item",
+    ".service-card, .portfolio-item, .stat, .about-text, .contact-item"
   );
 
   fadeElements.forEach((el) => {
@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const contactForm = document.getElementById("kontaktskjema");
 
 if (contactForm) {
-  contactForm.addEventListener("submit", function (e) {
+  contactForm.addEventListener("submit", function(e) {
     e.preventDefault();
 
     // Get form data
@@ -173,7 +173,7 @@ if (contactForm) {
     setTimeout(() => {
       showMessage(
         "Takk for din henvendelse! Vi kommer tilbake til deg så snart som mulig.",
-        "success",
+        "success"
       );
       this.reset();
 
@@ -209,10 +209,10 @@ function showMessage(message, type) {
         font-weight: 500;
         text-align: center;
         ${
-          type === "success"
-            ? "background-color: #e8f5e8; color: #1d5f81; border: 1px solid #c3e6cb;"
-            : "background-color: #fef3e8; color: #b8441f; border: 1px solid #eb8822;"
-        }
+  type === "success"
+    ? "background-color: #e8f5e8; color: #1d5f81; border: 1px solid #c3e6cb;"
+    : "background-color: #fef3e8; color: #b8441f; border: 1px solid #eb8822;"
+}
     `;
 
   // Add message after form
@@ -230,7 +230,7 @@ function showMessage(message, type) {
 function scrollToTop() {
   window.scrollTo({
     top: 0,
-    behavior: "smooth",
+    behavior: "smooth"
   });
 }
 
@@ -276,33 +276,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Typing effect for hero title
-function typeWriter(element, text, speed = 100) {
-  let i = 0;
-  element.textContent = "";
-
-  function type() {
-    if (i < text.length) {
-      element.textContent += text.charAt(i);
-      i++;
-      setTimeout(type, speed);
-    }
-  }
-
-  type();
-}
-
-// Initialize typing effect when page loads - DISABLED
-// document.addEventListener("DOMContentLoaded", () => {
-//   const heroTitle = document.querySelector(".hero-title");
-//   if (heroTitle) {
-//     const originalText = heroTitle.textContent;
-//     setTimeout(() => {
-//       typeWriter(heroTitle, originalText, 80);
-//     }, 1000);
-//   }
-// });
-
 // Counter animation for statistics
 function animateCounter(element, target, duration = 2000) {
   let start = 0;
@@ -333,7 +306,7 @@ const statsObserver = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.5 },
+  { threshold: 0.5 }
 );
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -353,27 +326,6 @@ window.addEventListener("scroll", () => {
     heroImage.style.transform = `translateY(${speed}px)`;
   }
 });
-
-// Portfolio filter functionality (if needed in the future)
-function filterPortfolio(category) {
-  const portfolioItems = document.querySelectorAll(".portfolio-item");
-
-  portfolioItems.forEach((item) => {
-    if (category === "all" || item.dataset.category === category) {
-      item.style.display = "block";
-      setTimeout(() => {
-        item.style.opacity = "1";
-        item.style.transform = "scale(1)";
-      }, 100);
-    } else {
-      item.style.opacity = "0";
-      item.style.transform = "scale(0.8)";
-      setTimeout(() => {
-        item.style.display = "none";
-      }, 300);
-    }
-  });
-}
 
 // Lazy loading for images (when you add real images)
 function lazyLoadImages() {
