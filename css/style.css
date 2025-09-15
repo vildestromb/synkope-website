@@ -1022,6 +1022,7 @@ section {
     .nav-dropdown-toggle {
         padding: 0.75rem 0;
         font-size: 1.1rem;
+        border-bottom: 1px solid #f2f3f5;
         width: 100%;
         display: block;
         text-align: center;
@@ -1029,10 +1030,14 @@ section {
         color: var(--text-color);
         border: none;
         background: none;
+        margin: 0;
     }
 
-    .nav-link:last-child,
-    .nav-dropdown-toggle {
+    .nav-link:last-child {
+        border-bottom: none;
+    }
+
+    .nav-dropdown:last-child .nav-dropdown-toggle {
         border-bottom: none;
     }
 
@@ -1194,8 +1199,8 @@ section {
     }
 
     .navbar {
-        height: 55px;
-        padding: 0.25rem 0;
+        height: 70px;
+        padding: 0.5rem 0;
     }
 
     .logo-image {
