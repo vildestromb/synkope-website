@@ -10,7 +10,7 @@ PACKAGE_JSON = package.json
 .DEFAULT_GOAL := help
 
 # Phony targets (targets that don't create files)
-.PHONY: help install lint lint-fix serve clean dev test cleanup optimize minify audit
+.PHONY: help install lint lint-fix serve clean dev test optimize minify audit
 
 # Help target - displays available commands
 help:
@@ -19,7 +19,7 @@ help:
 	@echo "  make install    - Install development dependencies"
 	@echo "  make lint       - Run ESLint on JavaScript files"
 	@echo "  make lint-fix   - Run ESLint and automatically fix issues"
-	@echo "  make cleanup    - Remove unused functions and clean up code"
+
 	@echo "  make optimize   - Optimize images and minify assets"
 	@echo "  make minify     - Minify CSS and JavaScript files"
 	@echo "  make audit      - Run performance audit with Lighthouse"
@@ -45,17 +45,7 @@ lint-fix: $(NODE_MODULES)
 	@echo "Running ESLint with automatic fixes on JavaScript files..."
 	npx eslint js/**/*.js --fix
 
-# Clean up unused functions and commented code
-cleanup:
-	@echo "Cleaning up unused functions and commented code..."
-	@echo "Removing unused typeWriter function..."
-	@sed -i.bak '/^\/\/ Typing effect for hero title/,/^\/\/ Initialize typing effect.*DISABLED$$/d' js/script.js
-	@sed -i.bak '/^\/\/ document\.addEventListener.*DOMContentLoaded.*=>/,/^\/\/ });$$/d' js/script.js
-	@echo "Removing unused filterPortfolio function..."
-	@sed -i.bak '/^\/\/ Portfolio filter functionality/,/^}$$/d' js/script.js
-	@echo "Removing backup files..."
-	@rm -f js/script.js.bak
-	@echo "Code cleanup completed. Run 'make lint' to verify."
+
 
 # Optimize images and minify assets
 optimize: minify
