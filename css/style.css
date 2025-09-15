@@ -136,6 +136,7 @@ p {
 @media (max-width: 768px) {
     .nav-container {
         padding: 0 20px;
+        justify-content: center;
     }
 
     .navbar {
@@ -980,16 +981,7 @@ section {
     }
 
     .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 65px;
-        flex-direction: column;
-        background-color: white;
-        width: 100%;
-        text-align: center;
-        transition: 0.3s;
-        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-        padding: 1rem 0;
+        display: none;
     }
 
     .nav-dropdown-menu {
@@ -1020,20 +1012,19 @@ section {
     }
 
     .nav-dropdown-toggle {
-        padding: 0.75rem 0;
-        font-size: 1.1rem;
-        border-bottom: 1px solid #f2f3f5;
-        width: 100%;
-        display: block;
-        text-align: center;
-        text-decoration: none;
-        color: var(--text-color);
-        background: none;
-        margin: 0;
-        border-left: none;
-        border-right: none;
-        border-top: none;
-        box-sizing: border-box;
+        padding: 0.75rem 0 !important;
+        font-size: 1.1rem !important;
+        border-bottom: 1px solid #f2f3f5 !important;
+        width: 100% !important;
+        display: block !important;
+        text-align: center !important;
+        text-decoration: none !important;
+        color: var(--text-color) !important;
+        background: none !important;
+        border: none !important;
+        border-bottom: 1px solid #f2f3f5 !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
     }
 
     .nav-link:last-child {
@@ -1045,8 +1036,7 @@ section {
     }
 
     .hamburger {
-        display: flex;
-        z-index: 1002;
+        display: none;
     }
 
     .hamburger.active .bar:nth-child(2) {
@@ -1059,6 +1049,10 @@ section {
 
     .hamburger.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
+    }
+
+    #kontakt {
+        display: none;
     }
 
     .container {
@@ -1520,8 +1514,17 @@ section {
         grid-template-columns: 1fr;
     }
 
+    .footer {
+        padding: 1.5rem 0 0.5rem;
+    }
+
     .footer-content {
         text-align: left;
         max-width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .footer-section p {
+        margin-bottom: 0.25rem;
     }
 }
