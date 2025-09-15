@@ -1,0 +1,46 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": ["eslint:recommended"],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "script"
+  },
+  "rules": {
+    "indent": ["warn", 2],
+    "linebreak-style": ["error", "unix"],
+    "quotes": [
+      "warn",
+      "double",
+      { "allowTemplateLiterals": true, "avoidEscape": true }
+    ],
+    "semi": ["error", "always"],
+    "no-unused-vars": "warn",
+    "no-console": "off",
+    "no-debugger": "error",
+    "no-alert": "warn",
+    "eqeqeq": "error",
+    "curly": "error",
+    "brace-style": ["warn", "1tbs", { "allowSingleLine": true }],
+    "comma-dangle": ["warn", "never"],
+    "no-trailing-spaces": "warn",
+    "eol-last": "warn",
+    "space-before-function-paren": [
+      "warn",
+      { "anonymous": "never", "named": "never", "asyncArrow": "always" }
+    ],
+    "keyword-spacing": "warn",
+    "space-infix-ops": "warn",
+    "object-curly-spacing": ["warn", "always"],
+    "array-bracket-spacing": ["warn", "never"],
+    "max-len": [
+      "warn",
+      { "code": 120, "ignoreUrls": true, "ignoreStrings": true }
+    ]
+  },
+  "globals": {
+    "console": "readonly"
+  }
+}

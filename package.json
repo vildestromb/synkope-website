@@ -1,0 +1,31 @@
+{
+  "name": "synkope-website",
+  "version": "1.0.0",
+  "description": "A modern, responsive website for Synkope consulting company",
+  "main": "index.html",
+  "scripts": {
+    "lint": "eslint js/**/*.js",
+    "serve": "npx serve . -p 8000",
+    "dev": "npm run serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vildestromb/synkope-website.git"
+  },
+  "keywords": [
+    "website",
+    "consulting",
+    "responsive",
+    "vanilla-js"
+  ],
+  "author": "Synkope",
+  "license": "UNLICENSED",
+  "private": true,
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "serve": "^14.2.1"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
