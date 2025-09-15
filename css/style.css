@@ -1028,9 +1028,12 @@ section {
         text-align: center;
         text-decoration: none;
         color: var(--text-color);
-        border: none;
         background: none;
         margin: 0;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        box-sizing: border-box;
     }
 
     .nav-link:last-child {
