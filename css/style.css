@@ -146,7 +146,7 @@ p {
 }
 
 .logo-image {
-    height: 50px;
+    height: 70px;
     width: auto;
     transition: transform 0.3s ease;
 }
@@ -154,7 +154,7 @@ p {
 /* Larger logo for big screens */
 @media (min-width: 1200px) {
     .logo-image {
-        height: 60px;
+        height: 90px;
     }
 }
 
@@ -952,7 +952,7 @@ section {
 /* Responsive Design */
 @media (max-width: 768px) {
     .logo-image {
-        height: 45px;
+        height: 60px;
     }
 
     .nav-menu {
@@ -1168,7 +1168,7 @@ section {
     }
 
     .logo-image {
-        height: 40px;
+        height: 55px;
     }
 
     .nav-menu {
