@@ -171,12 +171,6 @@ class ContentLoader {
     if (subtitle && hero.subtitle) {
       subtitle.textContent = hero.subtitle;
     }
-
-    // CTA button
-    const ctaButton = document.querySelector(".hero-content .btn");
-    if (ctaButton && hero.cta) {
-      ctaButton.textContent = hero.cta;
-    }
   }
 
   applyAbout() {
