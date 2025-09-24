@@ -1,3 +1,8 @@
+// Utility Functions
+function removeElementFocus(element) {
+  element.blur(); // Remove focus to prevent sticky border
+}
+
 // Mobile Navigation Toggle
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
@@ -10,9 +15,10 @@ hamburger.addEventListener("click", () => {
 
 // Close mobile menu when clicking on a link
 navLinks.forEach((link) => {
-  link.addEventListener("click", () => {
+  link.addEventListener("click", function() {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
+    removeElementFocus(this);
   });
 });
 
@@ -22,10 +28,13 @@ const dropdownToggle = document.querySelector(".nav-dropdown-toggle");
 const dropdownMenu = document.querySelector(".nav-dropdown-menu");
 
 if (dropdown && dropdownToggle && dropdownMenu) {
-  // Toggle dropdown on click
+  // Toggle dropdown on click (desktop only)
   dropdownToggle.addEventListener("click", (e) => {
-    e.preventDefault();
-    dropdown.classList.toggle("active");
+    if (window.innerWidth > 768) {
+      e.preventDefault();
+      dropdown.classList.toggle("active");
+    }
+    // On mobile, let the link work normally (don't prevent default)
   });
 
   // Close dropdown when clicking outside
@@ -38,8 +47,9 @@ if (dropdown && dropdownToggle && dropdownMenu) {
   // Close dropdown when clicking on dropdown links
   const dropdownLinks = document.querySelectorAll(".nav-dropdown-link");
   dropdownLinks.forEach((link) => {
-    link.addEventListener("click", () => {
+    link.addEventListener("click", function() {
       dropdown.classList.remove("active");
+      removeElementFocus(this);
     });
   });
 
@@ -70,7 +80,7 @@ window.addEventListener("scroll", () => {
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
+  anchor.addEventListener("click", function(e) {
     e.preventDefault();
     const target = document.querySelector(this.getAttribute("href"));
 
@@ -82,9 +92,10 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 
       window.scrollTo({
         top: offsetPosition,
-        behavior: "smooth",
+        behavior: "smooth"
       });
     }
+    removeElementFocus(this);
   });
 });
 
@@ -115,7 +126,7 @@ window.addEventListener("scroll", () => {
 // Fade in animation on scroll
 const observerOptions = {
   threshold: 0.1,
-  rootMargin: "0px 0px -50px 0px",
+  rootMargin: "0px 0px -50px 0px"
 };
 
 const observer = new IntersectionObserver((entries) => {
@@ -129,7 +140,7 @@ const observer = new IntersectionObserver((entries) => {
 // Add fade-in class to elements and observe them
 document.addEventListener("DOMContentLoaded", () => {
   const fadeElements = document.querySelectorAll(
-    ".service-card, .portfolio-item, .stat, .about-text, .contact-item",
+    ".service-card, .portfolio-item, .stat, .about-text, .contact-item"
   );
 
   fadeElements.forEach((el) => {
@@ -142,7 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const contactForm = document.getElementById("kontaktskjema");
 
 if (contactForm) {
-  contactForm.addEventListener("submit", function (e) {
+  contactForm.addEventListener("submit", function(e) {
     e.preventDefault();
 
     // Get form data
@@ -152,14 +163,20 @@ if (contactForm) {
     const emne = formData.get("emne");
     const melding = formData.get("melding");
 
-    // Basic validation
-    if (!navn || !epost || !emne || !melding) {
-      showMessage("Vennligst fyll ut alle feltene.", "error");
-      return;
-    }
+    // Enhanced validation
+    const validationResult = validateForm({ navn, epost, emne, melding });
 
-    if (!isValidEmail(epost)) {
-      showMessage("Vennligst skriv inn en gyldig e-postadresse.", "error");
+    if (!validationResult.isValid) {
+      showMessage(validationResult.message, "error");
+      // Focus on the first invalid field
+      if (validationResult.field) {
+        const field = document.getElementById(validationResult.field);
+        if (field) {
+          field.focus();
+          field.classList.add("error");
+          setTimeout(() => field.classList.remove("error"), 3000);
+        }
+      }
       return;
     }
 
@@ -173,7 +190,7 @@ if (contactForm) {
     setTimeout(() => {
       showMessage(
         "Takk for din henvendelse! Vi kommer tilbake til deg så snart som mulig.",
-        "success",
+        "success"
       );
       this.reset();
 
@@ -185,9 +202,47 @@ if (contactForm) {
 }
 
 // Email validation function
+// Enhanced form validation
+function validateForm({ navn, epost, emne, melding }) {
+  // Check for empty fields
+  if (!navn || navn.trim().length < 2) {
+    return {
+      isValid: false,
+      message: "Navn må være minst 2 tegn langt.",
+      field: "navn"
+    };
+  }
+
+  if (!epost || !isValidEmail(epost)) {
+    return {
+      isValid: false,
+      message: "Vennligst skriv inn en gyldig e-postadresse.",
+      field: "epost"
+    };
+  }
+
+  if (!emne || emne.trim().length < 3) {
+    return {
+      isValid: false,
+      message: "Emne må være minst 3 tegn langt.",
+      field: "emne"
+    };
+  }
+
+  if (!melding || melding.trim().length < 10) {
+    return {
+      isValid: false,
+      message: "Melding må være minst 10 tegn lang.",
+      field: "melding"
+    };
+  }
+
+  return { isValid: true };
+}
+
 function isValidEmail(email) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
+  return emailRegex.test(email.trim());
 }
 
 // Show message function
@@ -202,19 +257,6 @@ function showMessage(message, type) {
   const messageEl = document.createElement("div");
   messageEl.className = `form-message ${type}`;
   messageEl.textContent = message;
-  messageEl.style.cssText = `
-        padding: 1rem;
-        margin: 1rem 0;
-        border-radius: 8px;
-        font-weight: 500;
-        text-align: center;
-        ${
-          type === "success"
-            ? "background-color: #e8f5e8; color: #1d5f81; border: 1px solid #c3e6cb;"
-            : "background-color: #fef3e8; color: #b8441f; border: 1px solid #eb8822;"
-        }
-    `;
-
   // Add message after form
   contactForm.appendChild(messageEl);
 
@@ -230,7 +272,7 @@ function showMessage(message, type) {
 function scrollToTop() {
   window.scrollTo({
     top: 0,
-    behavior: "smooth",
+    behavior: "smooth"
   });
 }
 
@@ -276,33 +318,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Typing effect for hero title
-function typeWriter(element, text, speed = 100) {
-  let i = 0;
-  element.textContent = "";
-
-  function type() {
-    if (i < text.length) {
-      element.textContent += text.charAt(i);
-      i++;
-      setTimeout(type, speed);
-    }
-  }
-
-  type();
-}
-
-// Initialize typing effect when page loads - DISABLED
-// document.addEventListener("DOMContentLoaded", () => {
-//   const heroTitle = document.querySelector(".hero-title");
-//   if (heroTitle) {
-//     const originalText = heroTitle.textContent;
-//     setTimeout(() => {
-//       typeWriter(heroTitle, originalText, 80);
-//     }, 1000);
-//   }
-// });
-
 // Counter animation for statistics
 function animateCounter(element, target, duration = 2000) {
   let start = 0;
@@ -333,7 +348,7 @@ const statsObserver = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.5 },
+  { threshold: 0.5 }
 );
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -353,27 +368,6 @@ window.addEventListener("scroll", () => {
     heroImage.style.transform = `translateY(${speed}px)`;
   }
 });
-
-// Portfolio filter functionality (if needed in the future)
-function filterPortfolio(category) {
-  const portfolioItems = document.querySelectorAll(".portfolio-item");
-
-  portfolioItems.forEach((item) => {
-    if (category === "all" || item.dataset.category === category) {
-      item.style.display = "block";
-      setTimeout(() => {
-        item.style.opacity = "1";
-        item.style.transform = "scale(1)";
-      }, 100);
-    } else {
-      item.style.opacity = "0";
-      item.style.transform = "scale(0.8)";
-      setTimeout(() => {
-        item.style.display = "none";
-      }, 300);
-    }
-  });
-}
 
 // Lazy loading for images (when you add real images)
 function lazyLoadImages() {

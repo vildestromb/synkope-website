@@ -1,0 +1,244 @@
+{
+  "site": {
+    "title": "Synkope",
+    "description": "Erfarne rådgivere med spisskompetanse innen prosjektledelse, IT-infrastruktur, sikkerhet og EMC-testing"
+  },
+  "navigation": {
+    "home": "Hjem",
+    "about": "Om Oss",
+    "team": "Team",
+    "services": "Tjenester",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title": "Erfarne rådgivere<br />med spisskompetanse",
+    "subtitle": "Vi tilbyr ekspertise innen prosjektledelse, IT-infrastruktur, informasjonssikkerhet og EMC-testing for både privat og offentlig sektor.",
+    "cta": "Kontakt oss",
+    "stats": {
+      "experience": "15+ års erfaring",
+      "projects": "100+ prosjekter",
+      "clients": "50+ kunder"
+    }
+  },
+  "about": {
+    "title": "Om Synkope",
+    "description": "Synkope består av erfarne rådgivere med ulike kompetanseområder. Vi hjelper kunder i både privat og offentlig sektor med å løse komplekse utfordringer innen teknologi og prosjektledelse.",
+    "mission": "Vår misjon er å levere skreddersydde løsninger som skaper verdi for våre kunder.",
+    "focus_areas": {
+      "title": "Våre fokusområder",
+      "areas": [
+        {
+          "title": "Teknologiledelse",
+          "description": "Strategisk rådgivning for teknologiutvikling og digital transformasjon."
+        },
+        {
+          "title": "Prosjektledelse",
+          "description": "Sertifiserte prosjektledere med dokumentert erfaring fra store og små prosjekter."
+        },
+        {
+          "title": "Sikkerhet",
+          "description": "Risikovurderinger og sikkerhetstiltak for kritisk infrastruktur."
+        },
+        {
+          "title": "Spesialkompetanse",
+          "description": "EMC-testing og elektromagnetisk kompatibilitet for militært utstyr."
+        }
+      ]
+    }
+  },
+  "team": {
+    "title": "Vårt team",
+    "subtitle": "Møt våre erfarne rådgivere",
+    "members": [
+      {
+        "name": "Andreas Strøm",
+        "title": "Daglig leder og senior rådgiver",
+        "description": "Erfaren leder med bred kompetanse innen IT-infrastruktur og prosjektledelse.",
+        "expertise": "Systemarkitektur, DevOps, smidig utvikling",
+        "certifications": "PRINCE2®, Sertifisert prosjektleder",
+        "linkedin": "https://www.linkedin.com/in/andreas-strom/"
+      },
+      {
+        "name": "Irene Driveklepp",
+        "title": "Senior rådgiver",
+        "description": "Spesialist innen informasjonssikkerhet og risikovurderinger.",
+        "expertise": "Informasjonssikkerhet, risikoanalyse",
+        "certifications": "CISSP, Sertifisert sikkerhetskonsulent",
+        "linkedin": "https://www.linkedin.com/in/irene-driveklepp-5a54ab/"
+      },
+      {
+        "name": "Erik Stræde",
+        "title": "Senior prosjektleder",
+        "description": "Erfaren prosjektleder med fokus på store og komplekse prosjekter.",
+        "expertise": "Prosjektledelse, SAFe, Scrum",
+        "certifications": "PRINCE2®, SAFe Program Consultant",
+        "linkedin": "https://www.linkedin.com/in/erik-straede/"
+      },
+      {
+        "name": "Torkell Bogstad",
+        "title": "EMC-spesialist",
+        "description": "Ekspert på elektromagnetisk kompatibilitet og testing av militært utstyr.",
+        "expertise": "EMC-testing, militære standarder",
+        "certifications": "EMC-sertifisert testteknikker",
+        "linkedin": "https://www.linkedin.com/in/torkell-bogstad-49262282/"
+      }
+    ]
+  },
+  "services": {
+    "title": "Våre tjenester",
+    "subtitle": "Skreddersydde løsninger for komplekse utfordringer",
+    "list": [
+      {
+        "title": "IKT-infrastruktur",
+        "description": "Moderne utvikling av infrastruktur krever smidig utvikling og DevOps-metodikk for å lykkes.",
+        "details": "Vi bistår med rådgivning, ledelse og styring, arkitektur og utvikling av IT-infrastruktur. Våre konsulenter har lang erfaring med både tradisjonelle og moderne teknologier.",
+        "link": "tjenester/ikt-infrastruktur.html"
+      },
+      {
+        "title": "Prosjektstyring",
+        "description": "Erfarne prosjektledere med PRINCE2® og SAFe-sertifiseringer.",
+        "details": "Vi tilbyr prosjektledelse på alle nivåer, fra små interne prosjekter til store organisasjonsendringer. Våre prosjektledere har dokumentert erfaring og relevante sertifiseringer.",
+        "link": "tjenester/prosjektstyring.html"
+      },
+      {
+        "title": "Informasjonssikkerhet",
+        "description": "Risikovurderinger og sikkerhetstiltak for kritisk infrastruktur.",
+        "details": "Vi hjelper organisasjoner med å identifisere, vurdere og håndtere sikkerhetsrisiko. Våre tjenester spenner fra strategisk rådgivning til praktisk implementering av sikkerhetstiltak.",
+        "link": "tjenester/informasjonssikkerhet.html"
+      },
+      {
+        "title": "EMC-testing",
+        "description": "Elektromagnetisk kompatibilitet for militært utstyr og kritiske systemer.",
+        "details": "Spesialiserte tjenester innen EMC-testing etter militære standarder. Vi har kompetanse og utstyr for å teste elektromagnetisk kompatibilitet på militært og sivilt utstyr.",
+        "link": "tjenester/emc.html"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Kontakt oss",
+    "subtitle": "Ta kontakt for en uforpliktende samtale om hvordan vi kan hjelpe deg.",
+    "form": {
+      "name_label": "Navn",
+      "name_placeholder": "Ditt fulle navn",
+      "email_label": "E-post",
+      "email_placeholder": "din@epost.no",
+      "subject_label": "Emne",
+      "subject_placeholder": "Hva gjelder henvendelsen?",
+      "message_label": "Melding",
+      "message_placeholder": "Beskriv din henvendelse...",
+      "submit_button": "Send melding",
+      "sending": "Sender...",
+      "success_message": "Takk for din henvendelse! Vi kommer tilbake til deg så snart som mulig.",
+      "required_fields": "Alle felter merket med * er påkrevd"
+    },
+    "validation": {
+      "name_too_short": "Navn må være minst 2 tegn langt.",
+      "invalid_email": "Vennligst skriv inn en gyldig e-postadresse.",
+      "subject_too_short": "Emne må være minst 3 tegn langt.",
+      "message_too_short": "Melding må være minst 10 tegn lang."
+    },
+    "info": {
+      "company": "Synkope AS",
+      "email": "hei@synkope.io",
+      "location": "Oslo, Norge",
+      "org_number": "Org.nr: 123 456 789"
+    }
+  },
+  "service_pages": {
+    "ikt_infrastruktur": {
+      "title": "IKT-infrastruktur",
+      "meta_description": "I moderne utvikling av infrastruktur er smidig utvikling og DevOps nøkkelord for å lykkes. Synkope kan bistå med rådgivning, ledelse og styring, arkitektur og utvikling.",
+      "content": {
+        "intro": [
+          "I moderne utvikling av infrastruktur er smidig utvikling og DevOps nøkkelord for å lykkes.",
+          "Synkope kan bistå med rådgivning, ledelse og styring, arkitektur og utvikling.",
+          "Vi kan tilby konsulenter som har følgende nøkkelkompetanse:"
+        ],
+        "competencies": [
+          "IKT-infrastruktur i store komplekse systemer",
+          "Systemarkitektur og sikkerhetsarkitektur",
+          "Infrastruktur som kode, automatisering og CI/CD",
+          "Konfigurasjonsstyring og endringskontroll",
+          "Integrering av sikkerhet i IKT-infrastruktur og systemutvikling",
+          "DevOps og smidig systemutvikling med SCRUM, Kanban eller SAFe"
+        ]
+      }
+    },
+    "prosjektstyring": {
+      "title": "Prosjektstyring",
+      "meta_description": "Erfarne prosjektledere med PRINCE2® og SAFe-sertifiseringer. Vi skaper engasjement og bidrar til effektivt samarbeid og kommunikasjon i prosjekter.",
+      "content": {
+        "intro": [
+          "Våre prosjektledere skaper engasjement og bidrar til effektivt samarbeid og kommunikasjon i prosjekter.",
+          "Vi har erfaring fra et bredt spekter av IKT-prosjekter i offentlig sektor, med kompetanse fra hele verdikjeden i et prosjekt, fra behovskartlegging, utvikling, test og produksjonssetting, samt overføring til drift og forvaltning. Vi er Prince2®- og SAFe-sertifisert, og kan ta et helhetlig prosjektlederansvar eller inngå i en ledergruppe for prosjektet.",
+          "Synkope tilbyr tjenester innenfor følgende områder:"
+        ],
+        "service_areas": [
+          "Prosjektstyring og -ledelse",
+          "Prosessarbeid",
+          "Prosjektstøtte/PMO",
+          "Leverandøroppfølging",
+          "Anskaffelser/forhandlinger",
+          "Produkt- og tjenesteutvikling",
+          "Økonomi og levetidskostnader",
+          "Overlevering til drift",
+          "Porteføljestyring"
+        ]
+      }
+    },
+    "informasjonssikkerhet": {
+      "title": "Informasjonssikkerhet",
+      "meta_description": "Risikovurderinger og sikkerhetstiltak for kritisk infrastruktur. Vi bruker ISO-27000-standardene, NSMs veiledninger eller standarder fra NIST.",
+      "content": {
+        "intro": ["Vi kan tilby konsulenter som har følgende nøkkelkompetanse"],
+        "key_competencies": [
+          "Sikkerhetsstyring",
+          "Risikovurderinger",
+          "Sikkerhetsgodkjenning av IKT-systemer"
+        ],
+        "standards": "Vi bruker ISO-27000-standardene, NSMs veiledninger eller standarder fra NIST i arbeidet vårt.",
+        "sections": {
+          "compliance": {
+            "title": "Sikring og compliance",
+            "intro": [
+              "Vi har lang erfaring med sikkerhetsherding av IKT-infrastruktur.",
+              "Vi kan hjelpe med å få på plass"
+            ],
+            "services": [
+              "Konfigurasjonsstyring av sikkerhetskonfigurasjon",
+              "Riktig sikkerhetslogging i infrastrukturen",
+              "Loggmottak for håndtering av sikkerhetshendelser",
+              "Automatisert sikkerhetstesting og compliance-testing"
+            ]
+          }
+        }
+      }
+    },
+    "emc": {
+      "title": "Elektromagnetisk kompatibilitet (EMC)",
+      "meta_description": "Elektromagnetisk kompatibilitet for militært utstyr og kritiske systemer. Rådgivning, testplanlegging og testing innenfor EMC-feltet.",
+      "content": {
+        "intro": [
+          "Synkope kan bistå med rådgivning, testplanlegging og testing innenfor EMC-feltet.",
+          "Vi kan tilby konsulenter som har følgende nøkkelkompetanse:"
+        ],
+        "competencies": [
+          "Inngående kunnskap om militære standarder på området",
+          "Utarbeidelse av krav i forbindelse med anskaffelser",
+          "Planlegge og gjennomføre EMC-tester"
+        ]
+      }
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Synkope AS. Alle rettigheter forbeholdt.",
+    "built_with": "Bygget med ❤️ for Synkope",
+    "contact_info": {
+      "company": "Synkope AS",
+      "address": "Solskinnsveien 6",
+      "postal": "0376 Oslo",
+      "org_number": "Org. nr. 921 125 739",
+      "email": "post@synkope.io"
+    }
+  }
+}

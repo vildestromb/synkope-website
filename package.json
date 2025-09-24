@@ -1,0 +1,38 @@
+{
+  "name": "synkope-website",
+  "version": "1.0.0",
+  "description": "A modern, responsive website for Synkope consulting company",
+  "main": "index.html",
+  "scripts": {
+    "lint": "eslint js/**/*.js",
+    "serve": "npx serve . -p 8000",
+    "dev": "npm run serve",
+    "minify:css": "cleancss -o dist/css/style.min.css css/style.css",
+    "minify:js": "uglifyjs js/script.js -o dist/js/script.min.js -c -m",
+    "minify": "mkdir -p dist/css dist/js && npm run minify:css && npm run minify:js",
+    "audit": "lighthouse http://localhost:8000 --only-categories=performance --output=html --output-path=./lighthouse-report.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vildestromb/synkope-website.git"
+  },
+  "keywords": [
+    "website",
+    "consulting",
+    "responsive",
+    "vanilla-js"
+  ],
+  "author": "Synkope",
+  "license": "UNLICENSED",
+  "private": true,
+  "devDependencies": {
+    "clean-css-cli": "^5.6.2",
+    "eslint": "^8.57.0",
+    "lighthouse": "^12.8.2",
+    "serve": "^14.2.1",
+    "uglify-js": "^3.17.4"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
