@@ -113,11 +113,11 @@ p {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
     z-index: 1000;
     padding: 1rem 0;
-    transition: all 0.3s ease;
+    transition: var(--transition);
 }
 
 .navbar.scrolled {
@@ -133,9 +133,29 @@ p {
     align-items: flex-end;
 }
 
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 0 20px;
+        justify-content: center;
+        position: relative;
+    }
+
+    .navbar {
+        padding: 1rem 0;
+        height: 70px;
+    }
+
+    .nav-logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
 .nav-logo {
     display: flex;
     align-items: center;
+    z-index: 1001;
 }
 
 .nav-logo a {
@@ -146,9 +166,15 @@ p {
 }
 
 .logo-image {
-    height: 70px;
+    height: 40px;
     width: auto;
-    transition: transform 0.3s ease;
+    transition: var(--transition);
+}
+
+@media (max-width: 768px) {
+    .logo-image {
+        height: 50px;
+    }
 }
 
 /* Larger logo for big screens */
@@ -277,6 +303,8 @@ p {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    position: relative;
+    z-index: 1002;
 }
 
 .bar {
@@ -729,6 +757,12 @@ section {
     padding: 3rem 0 1rem;
 }
 
+@media (max-width: 768px) {
+    .footer {
+        padding: 2rem 0 1rem;
+    }
+}
+
 .footer-content {
     display: block;
     margin-bottom: 2rem;
@@ -745,6 +779,17 @@ section {
 .footer-section p {
     color: #bdc3c7;
     margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .footer-section p {
+        margin-bottom: 0.5rem;
+        line-height: 1.4;
+    }
+
+    .footer-section h4 {
+        margin-bottom: 0.75rem;
+    }
 }
 
 .footer-section ul {
@@ -804,6 +849,16 @@ section {
 .footer-bottom p {
     color: #bdc3c7;
     margin: 0;
+}
+
+@media (max-width: 768px) {
+    .footer-bottom {
+        padding-top: 0.75rem;
+    }
+
+    .footer-bottom p {
+        font-size: 0.9rem;
+    }
 }
 
 /* Team Section */
@@ -972,13 +1027,14 @@ section {
     .nav-menu {
         position: fixed;
         left: -100%;
-        top: 65px;
+        top: 70px;
         flex-direction: column;
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
         width: 100%;
         text-align: center;
         transition: 0.3s;
-        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.1);
         padding: 2rem 0;
     }
 
@@ -1031,6 +1087,10 @@ section {
     .hamburger {
         display: flex;
         z-index: 1002;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
     }
 
     .hamburger.active .bar:nth-child(2) {
