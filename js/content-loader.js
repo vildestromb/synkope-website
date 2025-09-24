@@ -8,6 +8,17 @@ class ContentLoader {
     this.pageType = this.detectPageType();
     this.serviceName =
       this.pageType === "service" ? this.detectServiceName() : null;
+
+    // Fallback content for local development when JSON loading fails
+    this.fallbackContent = {
+      navigation: {
+        home: "Hjem",
+        about: "Om Oss",
+        team: "Team",
+        services: "Tjenester",
+        contact: "Kontakt"
+      }
+    };
   }
 
   // Detect whether we're on the main site or a service page
@@ -47,6 +58,17 @@ class ContentLoader {
   async loadContent(language = "no") {
     try {
       const basePath = this.pageType === "service" ? "../content/" : "content/";
+      const isLocal = window.location.protocol === "file:";
+
+      if (isLocal) {
+        console.warn(
+          "Local development detected - JSON loading may fail due to CORS restrictions"
+        );
+        console.log(
+          "To fix: serve the site with 'make serve' or 'python -m http.server'"
+        );
+      }
+
       const response = await fetch(`${basePath}${language}.json`);
 
       if (!response.ok) {
@@ -57,7 +79,23 @@ class ContentLoader {
       this.language = language;
       return this.content;
     } catch (error) {
+      const isLocal = window.location.protocol === "file:";
       console.error("Error loading content:", error);
+
+      if (isLocal) {
+        console.warn(
+          "⚠️  Local development issue: Cannot load JSON files via file:// protocol"
+        );
+        console.log(
+          "🔧 Solution: Run 'make serve' or 'python -m http.server 8000' and visit http://localhost:8000"
+        );
+        console.log("📝 Navigation will use fallback content for now");
+      } else {
+        console.error(
+          "Content loading failed on live server - check network and file paths"
+        );
+      }
+
       return null;
     }
   }
@@ -124,7 +162,8 @@ class ContentLoader {
   // === MAIN PAGE CONTENT METHODS ===
 
   applyNavigation() {
-    const nav = this.content.navigation;
+    // Use content navigation if available, otherwise use fallback
+    const nav = this.content?.navigation || this.fallbackContent.navigation;
     if (!nav) {
       return;
     }
@@ -606,8 +645,23 @@ document.addEventListener("DOMContentLoaded", async () => {
         console.log(`Service: ${window.contentLoader.getServiceName()}`);
       }
     } else {
-      console.warn("Failed to load content from JSON files");
+      const isLocal = window.location.protocol === "file:";
+      if (isLocal) {
+        console.warn(
+          "🔧 Content loading failed locally - applying navigation fallback"
+        );
+        console.log(
+          "💡 For full functionality, serve the site with: make serve"
+        );
+      } else {
+        console.error("❌ Content loading failed on live server");
+      }
+
+      // Still apply navigation with fallback content so menu works
+      window.contentLoader.applyNavigation();
     }
+  } else {
+    console.log("Content loading is disabled");
   }
 });
 
