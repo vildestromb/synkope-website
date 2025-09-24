@@ -15,3 +15,5 @@
 - fjerne underoverskrifter
 - differensiere mellom brødtekst og liste på tjenestesidene - større mellomrom eller annen font/type?
 - fjerne personlig pronomen
+- redusere antall tjenestepunkter
+- fikse mobilversjon - logo
