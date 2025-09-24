@@ -1,8 +1,3 @@
-// Utility Functions
-function removeElementFocus(element) {
-  element.blur(); // Remove focus to prevent sticky border
-}
-
 // Mobile Navigation Toggle
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
@@ -18,7 +13,7 @@ navLinks.forEach((link) => {
   link.addEventListener("click", function() {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
-    removeElementFocus(this);
+    this.blur(); // Remove focus to prevent sticky border
   });
 });
 
@@ -28,13 +23,10 @@ const dropdownToggle = document.querySelector(".nav-dropdown-toggle");
 const dropdownMenu = document.querySelector(".nav-dropdown-menu");
 
 if (dropdown && dropdownToggle && dropdownMenu) {
-  // Toggle dropdown on click (desktop only)
+  // Toggle dropdown on click
   dropdownToggle.addEventListener("click", (e) => {
-    if (window.innerWidth > 768) {
-      e.preventDefault();
-      dropdown.classList.toggle("active");
-    }
-    // On mobile, let the link work normally (don't prevent default)
+    e.preventDefault();
+    dropdown.classList.toggle("active");
   });
 
   // Close dropdown when clicking outside
@@ -49,7 +41,7 @@ if (dropdown && dropdownToggle && dropdownMenu) {
   dropdownLinks.forEach((link) => {
     link.addEventListener("click", function() {
       dropdown.classList.remove("active");
-      removeElementFocus(this);
+      this.blur(); // Remove focus to prevent sticky border
     });
   });
 
@@ -95,7 +87,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         behavior: "smooth"
       });
     }
-    removeElementFocus(this);
+    this.blur(); // Remove focus to prevent sticky border
   });
 });
 
