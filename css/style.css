@@ -29,61 +29,10 @@ body {
     background-color: var(--background-color);
 }
 
-/* Utility Classes for Containers */
-.container-base {
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
 .container {
     max-width: var(--container-width);
     margin: 0 auto;
     padding: 0 20px;
-}
-
-.container-wide {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.container-narrow {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Hover Effect Utilities */
-.hover-lift-sm {
-    transition: transform 0.3s ease;
-}
-
-.hover-lift-sm:hover {
-    transform: translateY(-2px);
-}
-
-.hover-lift-md {
-    transition: transform 0.3s ease;
-}
-
-.hover-lift-md:hover {
-    transform: translateY(-5px);
-}
-
-.hover-lift-lg {
-    transition: transform 0.3s ease;
-}
-
-.hover-lift-lg:hover {
-    transform: translateY(-8px);
-}
-
-.hover-lift-xl {
-    transition: transform 0.3s ease;
-}
-
-.hover-lift-xl:hover {
-    transform: translateY(-10px);
 }
 
 /* Typography */
@@ -143,6 +92,7 @@ p {
 }
 
 .btn-primary:hover {
+    transform: translateY(-2px);
     box-shadow: 0 10px 30px rgba(235, 136, 34, 0.3);
 }
 
@@ -155,6 +105,7 @@ p {
 .btn-secondary:hover {
     background: var(--primary-color);
     color: white;
+    transform: translateY(-2px);
 }
 
 /* Navigation */
@@ -162,7 +113,7 @@ p {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     z-index: 1000;
     padding: 1rem 0;
@@ -180,17 +131,6 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-}
-
-@media (max-width: 768px) {
-    .nav-container {
-        padding: 0 20px;
-        justify-content: center;
-    }
-
-    .navbar {
-        padding: 1rem 0;
-    }
 }
 
 .nav-logo {
@@ -232,6 +172,60 @@ p {
     display: flex;
     gap: 2rem;
     align-items: flex-end;
+}
+
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown-toggle::after {
+    content: " ▼";
+    font-size: 0.8em;
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.nav-dropdown:hover .nav-dropdown-toggle::after,
+.nav-dropdown.active .nav-dropdown-toggle::after {
+    transform: rotate(180deg);
+}
+
+.nav-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+    background: white;
+    min-width: 200px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 0.5rem 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown.active .nav-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.nav-dropdown-link {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 400;
+    transition: var(--transition);
+}
+
+.nav-dropdown-link:hover {
+    background: #f5f7fa;
+    color: var(--primary-color);
+    padding-left: 2rem;
 }
 
 .nav-link {
@@ -277,6 +271,20 @@ p {
 
 .nav-link.active::after {
     width: 100%;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background: var(--secondary-color);
+    margin: 3px 0;
+    transition: 0.3s;
 }
 
 /* Hero Section */
@@ -471,6 +479,7 @@ section {
 }
 
 .service-card:hover {
+    transform: translateY(-10px);
     box-shadow:
         0 20px 50px rgba(29, 95, 129, 0.15),
         0 8px 25px rgba(255, 165, 80, 0.15);
@@ -548,6 +557,7 @@ section {
 }
 
 .portfolio-item:hover {
+    transform: translateY(-8px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
@@ -834,6 +844,7 @@ section {
 }
 
 .team-member:hover {
+    transform: translateY(-5px);
     box-shadow:
         0 15px 45px rgba(29, 95, 129, 0.18),
         0 5px 20px rgba(255, 165, 80, 0.12);
@@ -959,11 +970,70 @@ section {
     }
 
     .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 65px;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        padding: 2rem 0;
+    }
+
+    .nav-dropdown-menu {
+        position: static;
+        box-shadow: none;
+        background: transparent;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        padding: 0;
+        margin-top: 1rem;
+    }
+
+    .nav-dropdown-link {
+        padding: 0.5rem 1rem;
+        margin: 0 1rem;
+        border-radius: 6px;
+    }
+
+    .nav-dropdown-toggle::after {
         display: none;
     }
 
-    #kontakt {
-        display: none;
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-link {
+        padding: 1rem 0;
+        font-size: 1.1rem;
+        border-bottom: 1px solid #f2f3f5;
+        width: 100%;
+        display: block;
+    }
+
+    .nav-link:last-child {
+        border-bottom: none;
+    }
+
+    .hamburger {
+        display: flex;
+        z-index: 1002;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
     }
 
     .container {
@@ -1107,8 +1177,8 @@ section {
     }
 
     .navbar {
-        height: 70px;
-        padding: 0.5rem 0;
+        height: 55px;
+        padding: 0.25rem 0;
     }
 
     .logo-image {
@@ -1237,7 +1307,7 @@ section {
 }
 
 .competence-item:hover {
-    /* Transform handled by hover-lift-md utility class */
+    transform: translateY(-5px);
 }
 
 .competence-item h3 {
@@ -1425,17 +1495,8 @@ section {
         grid-template-columns: 1fr;
     }
 
-    .footer {
-        padding: 1.5rem 0 0.5rem;
-    }
-
     .footer-content {
         text-align: left;
         max-width: 100%;
-        margin-bottom: 1rem;
-    }
-
-    .footer-section p {
-        margin-bottom: 0.25rem;
     }
 }
