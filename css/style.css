@@ -372,11 +372,6 @@ p {
     margin-bottom: 2rem;
 }
 
-.hero-buttons {
-    display: flex;
-    gap: 1rem;
-}
-
 .hero-image {
     position: relative;
 }
@@ -1126,18 +1121,6 @@ section {
         grid-template-columns: 1fr;
         text-align: center;
         gap: 2rem;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    .hero-buttons .btn {
-        width: 100%;
-        max-width: 300px;
-        padding: 15px 30px;
     }
 
     .about-content {
