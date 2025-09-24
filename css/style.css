@@ -137,25 +137,16 @@ p {
     .nav-container {
         padding: 0 20px;
         justify-content: center;
-        position: relative;
     }
 
     .navbar {
         padding: 1rem 0;
-        height: 70px;
-    }
-
-    .nav-logo {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
     }
 }
 
 .nav-logo {
     display: flex;
     align-items: center;
-    z-index: 1001;
 }
 
 .nav-logo a {
@@ -166,14 +157,14 @@ p {
 }
 
 .logo-image {
-    height: 40px;
+    height: 70px;
     width: auto;
-    transition: var(--transition);
+    transition: transform 0.3s ease;
 }
 
 @media (max-width: 768px) {
     .logo-image {
-        height: 50px;
+        height: 60px;
     }
 }
 
