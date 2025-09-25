@@ -415,14 +415,15 @@ section {
 
 /* About Section */
 .about {
-    padding: 80px 0;
+    padding: 50px 0 30px 0;
     background: linear-gradient(135deg, #fbf9f8 0%, #ffffff 50%, #fcf7f2 100%);
 }
 
 .about-content {
     display: block;
-    max-width: 1000px;
+    max-width: 900px;
     margin: 0 auto;
+    line-height: 1.5;
 }
 
 .about-section {
@@ -446,6 +447,12 @@ section {
 .about-section p {
     margin-top: 0;
     margin-bottom: 1rem;
+    font-size: 1.1rem;
+    text-align: left;
+}
+
+.about-section p:last-child {
+    margin-bottom: 0;
 }
 
 .about-section li {
