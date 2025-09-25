@@ -498,11 +498,20 @@ section {
     transition: opacity 0.3s ease;
 }
 
+.service-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.service-card-link:hover .service-card,
 .service-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
     box-shadow:
-        0 20px 50px rgba(29, 95, 129, 0.15),
-        0 8px 25px rgba(255, 165, 80, 0.15);
+        0 12px 35px rgba(29, 95, 129, 0.15),
+        0 4px 15px rgba(255, 165, 80, 0.1);
+    cursor: pointer;
 }
 
 .service-card:hover::before {
