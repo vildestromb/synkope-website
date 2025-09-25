@@ -12,7 +12,7 @@
   },
   "hero": {
     "title": "Erfarne rådgivere<br />med spisskompetanse",
-    "subtitle": "Vi tilbyr ekspertise innen prosjektledelse, IT-infrastruktur, informasjonssikkerhet og EMC-testing for både privat og offentlig sektor.",
+    "subtitle": "Synkope består av erfarne rådgivere med ulike kompetanseområder. Vi hjelper kunder i både privat og offentlig sektor med å løse komplekse utfordringer innen teknologi og prosjektledelse.",
     "cta": "Kontakt oss",
     "stats": {
       "experience": "15+ års erfaring",
@@ -175,14 +175,10 @@
         ],
         "service_areas": [
           "Prosjektstyring og -ledelse",
-          "Prosessarbeid",
-          "Prosjektstøtte/PMO",
           "Leverandøroppfølging",
           "Anskaffelser/forhandlinger",
-          "Produkt- og tjenesteutvikling",
           "Økonomi og levetidskostnader",
-          "Overlevering til drift",
-          "Porteføljestyring"
+          "Overlevering til drift"
         ]
       }
     },
