@@ -420,16 +420,14 @@ section {
 }
 
 .about-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: start;
+    display: block;
     max-width: 1000px;
     margin: 0 auto;
 }
 
 .about-section {
-    text-align: left;
+    text-align: center;
+    margin-bottom: 3rem;
 }
 
 .about-section h3 {
@@ -1299,9 +1297,51 @@ section {
 }
 
 .service-section p {
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: #4a5568;
+    font-size: 1.1rem;
+}
+
+.service-section p:last-of-type {
+    margin-bottom: 3rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.service-list {
+    list-style: none;
+    padding: 0;
+    margin: 3rem 0;
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 2rem;
+    border-left: 5px solid #ff9f50;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.service-list li {
+    position: relative;
+    padding: 1rem 0 1rem 2rem;
     color: #1d5f81;
+    font-weight: 500;
     line-height: 1.6;
-    margin-bottom: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 1.05rem;
+}
+
+.service-list li:last-child {
+    border-bottom: none;
+}
+
+.service-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    top: 1rem;
+    color: #ff9f50;
+    font-weight: bold;
+    font-size: 1.2rem;
 }
 
 .competence-grid {

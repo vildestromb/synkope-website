@@ -34,7 +34,7 @@ class ContentLoader {
     if (this.content.site) {
       document.title = this.content.site.title;
       const metaDescription = document.querySelector(
-        'meta[name="description"]'
+        'meta[name="description"]',
       );
       if (metaDescription) {
         metaDescription.setAttribute("content", this.content.site.description);
@@ -75,7 +75,7 @@ class ContentLoader {
       om: nav.about,
       team: nav.team,
       tjenester: nav.services,
-      kontakt: nav.contact
+      kontakt: nav.contact,
     };
 
     Object.entries(navLinks).forEach(([href, text]) => {
@@ -146,7 +146,7 @@ class ContentLoader {
       }
 
       const focusItems = document.querySelectorAll(
-        ".about-features .feature-item"
+        ".about-features .feature-item",
       );
       if (focusItems.length >= about.focus_areas.areas.length) {
         about.focus_areas.areas.forEach((area, index) => {
@@ -190,35 +190,18 @@ class ContentLoader {
         const memberElement = teamMembers[index];
         if (memberElement) {
           const name = memberElement.querySelector("h3");
-          const title = memberElement.querySelector(
-            ".team-info p:first-of-type"
-          );
-          const desc = memberElement.querySelector(
-            ".team-info p:nth-of-type(2)"
-          );
-          const expertise = memberElement.querySelector(
-            ".team-info p:nth-of-type(3)"
-          );
+          const desc = memberElement.querySelector(".team-info p");
 
           if (name) {
             name.textContent = member.name;
           }
-          if (title) {
-            title.textContent = "";
-            const strong = document.createElement("strong");
-            strong.textContent = member.title;
-            title.appendChild(strong);
-          }
           if (desc) {
             desc.textContent = member.description;
-          }
-          if (expertise) {
-            expertise.textContent = member.expertise;
           }
 
           // Update LinkedIn link
           const linkedinLink = memberElement.querySelector(
-            'a[href*="linkedin"]'
+            'a[href*="linkedin"]',
           );
           if (linkedinLink && member.linkedin) {
             linkedinLink.href = member.linkedin;
@@ -370,7 +353,7 @@ class ContentLoader {
 document.addEventListener("DOMContentLoaded", async () => {
   // Check if content should be loaded from JSON
   const useContentLoader = document.querySelector(
-    'meta[name="use-content-loader"]'
+    'meta[name="use-content-loader"]',
   );
 
   if (useContentLoader && useContentLoader.getAttribute("content") === "true") {

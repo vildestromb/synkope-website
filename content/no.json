@@ -21,7 +21,7 @@
     }
   },
   "about": {
-    "title": "Om Synkope",
+    "title": "Om Oss",
     "description": "Synkope består av erfarne rådgivere med ulike kompetanseområder. Vi hjelper kunder i både privat og offentlig sektor med å løse komplekse utfordringer innen teknologi og prosjektledelse.",
     "mission": "Vår misjon er å levere skreddersydde løsninger som skaper verdi for våre kunder.",
     "focus_areas": {
@@ -47,13 +47,13 @@
     }
   },
   "team": {
-    "title": "Vårt team",
+    "title": "Team",
     "subtitle": "Møt våre erfarne rådgivere",
     "members": [
       {
         "name": "Andreas Strøm",
         "title": "Daglig leder og senior rådgiver",
-        "description": "Erfaren leder med bred kompetanse innen IT-infrastruktur og prosjektledelse.",
+        "description": "Systemarkitekt og utvikler med lang erfaring fra store infrastrukturprosjekter og programmer. Andreas har spesialkompetanse på utvikling og sikkerhetsgodkjenning av gradert infrastruktur, og etablering av systemer for sikkerhetsgodkjenning av graderte informasjonssystemer.",
         "expertise": "Systemarkitektur, DevOps, smidig utvikling",
         "certifications": "PRINCE2®, Sertifisert prosjektleder",
         "linkedin": "https://www.linkedin.com/in/andreas-strom/"
@@ -61,7 +61,7 @@
       {
         "name": "Irene Driveklepp",
         "title": "Senior rådgiver",
-        "description": "Spesialist innen informasjonssikkerhet og risikovurderinger.",
+        "description": "Prosjektleder med lang erfaring fra anskaffelser, leveranseprosjekter og overlevering til drift, hovedsakelig i offentlig forvaltning. Irene er utdannet forvaltningsinformatiker fra Universitetet i Oslo.",
         "expertise": "Informasjonssikkerhet, risikoanalyse",
         "certifications": "CISSP, Sertifisert sikkerhetskonsulent",
         "linkedin": "https://www.linkedin.com/in/irene-driveklepp-5a54ab/"
@@ -69,7 +69,7 @@
       {
         "name": "Erik Stræde",
         "title": "Senior prosjektleder",
-        "description": "Erfaren prosjektleder med fokus på store og komplekse prosjekter.",
+        "description": "Sertifisert prosjektleder fra Forsvaret, med bred erfaring fra flere komplekse anskaffelses-, utviklings- og implementeringsprosjekter. Erik har kompetanse på økonomi- og kontraktsoppfølging i store prosjekter.",
         "expertise": "Prosjektledelse, SAFe, Scrum",
         "certifications": "PRINCE2®, SAFe Program Consultant",
         "linkedin": "https://www.linkedin.com/in/erik-straede/"
@@ -77,7 +77,7 @@
       {
         "name": "Torkell Bogstad",
         "title": "EMC-spesialist",
-        "description": "Ekspert på elektromagnetisk kompatibilitet og testing av militært utstyr.",
+        "description": "EMC-seniorrådgiver med bakgrunn fra Forsvaret. Torkell har bred kompetanse innenfor fagfeltet EMC, alt fra kravstilling og oppfølging av leverandører, til planlegging og gjennomføring av EMC-testing.",
         "expertise": "EMC-testing, militære standarder",
         "certifications": "EMC-sertifisert testteknikker",
         "linkedin": "https://www.linkedin.com/in/torkell-bogstad-49262282/"
@@ -85,7 +85,7 @@
     ]
   },
   "services": {
-    "title": "Våre tjenester",
+    "title": "Tjenester",
     "subtitle": "Skreddersydde løsninger for komplekse utfordringer",
     "list": [
       {
