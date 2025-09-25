@@ -1299,7 +1299,7 @@ section {
 .service-section p {
     line-height: 1.8;
     margin-bottom: 2rem;
-    color: #4a5568;
+    color: var(--text-color);
     font-size: 1.1rem;
 }
 
@@ -1316,7 +1316,6 @@ section {
     background: #f8fafc;
     border-radius: 12px;
     padding: 2rem;
-    border-left: 5px solid #ff9f50;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
