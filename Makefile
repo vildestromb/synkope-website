@@ -10,7 +10,7 @@ PACKAGE_JSON = package.json
 .DEFAULT_GOAL := help
 
 # Phony targets (targets that don't create files)
-.PHONY: help install lint lint-fix serve clean dev test cleanup optimize minify audit
+.PHONY: help install lint lint-fix format format-check serve clean dev test cleanup optimize minify audit
 
 # Help target - displays available commands
 help:
@@ -19,6 +19,8 @@ help:
 	@echo "  make install    - Install development dependencies"
 	@echo "  make lint       - Run ESLint on JavaScript files"
 	@echo "  make lint-fix   - Run ESLint and automatically fix issues"
+	@echo "  make format     - Format all code with Prettier"
+	@echo "  make format-check - Check if code is properly formatted"
 	@echo "  make cleanup    - Remove unused functions and clean up code"
 	@echo "  make optimize   - Optimize images and minify assets"
 	@echo "  make minify     - Minify CSS and JavaScript files"
@@ -44,6 +46,16 @@ lint: $(NODE_MODULES)
 lint-fix: $(NODE_MODULES)
 	@echo "Running ESLint with automatic fixes on JavaScript files..."
 	npx eslint js/**/*.js --fix
+
+# Format code with Prettier
+format: $(NODE_MODULES)
+	@echo "Formatting code with Prettier..."
+	npx prettier --write "**/*.{html,css,js,json}" --ignore-path .gitignore
+
+# Check if code is properly formatted
+format-check: $(NODE_MODULES)
+	@echo "Checking code formatting with Prettier..."
+	npx prettier --check "**/*.{html,css,js,json}" --ignore-path .gitignore
 
 # Clean up unused functions and commented code
 cleanup:

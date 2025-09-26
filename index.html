@@ -1,483 +1,380 @@
 <!doctype html>
 <html lang="no">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Synkope</title>
-        <meta
-            name="description"
-            content="Erfarne rådgivere med spisskompetanse innen prosjektledelse, IT-infrastruktur, sikkerhet og EMC-testing"
-        />
-        <meta name="theme-color" content="#EB8822" />
-        <meta name="author" content="Synkope" />
-        <meta name="robots" content="index, follow" />
-        <meta name="use-content-loader" content="true" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Synkope</title>
+    <meta
+      name="description"
+      content="Erfarne rådgivere med spisskompetanse innen prosjektledelse, IT-infrastruktur, sikkerhet og EMC-testing" />
+    <meta name="theme-color" content="#EB8822" />
+    <meta name="author" content="Synkope" />
+    <meta name="robots" content="index, follow" />
+    <meta name="use-content-loader" content="true" />
 
-        <!-- Performance optimizations -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link rel="stylesheet" href="css/style.css" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Open+Sans:wght@300;400;600&display=swap"
-            rel="stylesheet"
-        />
-        <script src="js/content-loader.js"></script>
-    </head>
-    <body>
-        <!-- Navigation -->
-        <nav class="navbar" aria-label="Main navigation">
-            <div class="nav-container">
-                <div class="nav-logo">
-                    <a href="#hjem">
-                        <img
-                            src="images/logo-standard.png"
-                            alt="Synkope Logo"
-                            class="logo-image"
-                        />
-                    </a>
-                </div>
-                <div class="nav-menu">
-                    <a href="#hjem" class="nav-link">Hjem</a>
-                    <a href="#om" class="nav-link">Om oss</a>
-                    <a href="#team" class="nav-link">Team</a>
-                    <div class="nav-dropdown">
-                        <a
-                            href="#tjenester"
-                            class="nav-link nav-dropdown-toggle"
-                            >Tjenester</a
-                        >
-                        <div class="nav-dropdown-menu">
-                            <a
-                                href="tjenester/ikt-infrastruktur.html"
-                                class="nav-dropdown-link"
-                                >IKT-infrastruktur</a
-                            >
-                            <a
-                                href="tjenester/prosjektstyring.html"
-                                class="nav-dropdown-link"
-                                >Prosjektstyring</a
-                            >
-                            <a
-                                href="tjenester/informasjonssikkerhet.html"
-                                class="nav-dropdown-link"
-                                >Informasjonssikkerhet</a
-                            >
-                            <a
-                                href="tjenester/emc.html"
-                                class="nav-dropdown-link"
-                                >EMC-testing</a
-                            >
-                        </div>
-                    </div>
-                    <a href="#kontakt" class="nav-link">Kontakt</a>
-                </div>
-                <div
-                    class="hamburger"
-                    role="button"
-                    aria-label="Toggle mobile menu"
-                    aria-expanded="false"
-                    tabindex="0"
+    <!-- Security -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self';" />
+
+    <!-- Performance optimizations -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Open+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet" />
+    <script src="js/content-loader.js"></script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="#hjem">
+            <img src="images/logo-standard.png" alt="Synkope Logo" class="logo-image" />
+          </a>
+        </div>
+        <div class="nav-menu">
+          <a href="#hjem" class="nav-link">Hjem</a>
+          <a href="#om" class="nav-link">Om oss</a>
+          <a href="#team" class="nav-link">Team</a>
+          <div class="nav-dropdown">
+            <a href="#tjenester" class="nav-link nav-dropdown-toggle">Tjenester</a>
+            <div class="nav-dropdown-menu">
+              <a href="tjenester/ikt-infrastruktur.html" class="nav-dropdown-link"
+                >IKT-infrastruktur</a
+              >
+              <a href="tjenester/prosjektstyring.html" class="nav-dropdown-link">Prosjektstyring</a>
+              <a href="tjenester/informasjonssikkerhet.html" class="nav-dropdown-link"
+                >Informasjonssikkerhet</a
+              >
+              <a href="tjenester/emc.html" class="nav-dropdown-link">EMC-testing</a>
+            </div>
+          </div>
+          <a href="#kontakt" class="nav-link">Kontakt</a>
+        </div>
+        <div
+          class="hamburger"
+          role="button"
+          aria-label="Toggle mobile menu"
+          aria-expanded="false"
+          tabindex="0">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hjem" class="hero" aria-labelledby="hero-title">
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1 id="hero-title" class="hero-title">
+            Erfarne rådgivere<br />
+            med spisskompetanse
+          </h1>
+          <p class="hero-subtitle">
+            Synkope består av erfarne rådgivere med ulike kompetanseområder. Vi hjelper kunder i
+            både privat og offentlig sektor med å løse komplekse utfordringer innen teknologi og
+            prosjektledelse.
+          </p>
+        </div>
+        <div class="hero-image">
+          <!-- Placeholder for hero image -->
+          <div class="hero-placeholder"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Om Oss Section -->
+    <section id="om" class="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="about-heading">Om oss</h2>
+        </div>
+        <div class="about-content">
+          <div class="about-section">
+            <p>
+              Vi tilbyr prosjektledelse med Prince2®- og SAFe-sertifiserte konsulenter som har
+              erfaring fra hele verdikjeden.
+            </p>
+            <p>
+              Våre tjenester inkluderer DevOps, smidig utvikling og modernisering av komplekse
+              IKT-systemer, sikkerhetstiltak og risikovurderinger, samt anskaffelser og
+              økonomistyring.
+            </p>
+            <p>
+              Med ekspertise innenfor elektromagnetisk kompatibilitet (EMC) hjelper vi leverandører
+              med å oppfylle militære krav til utstyr og systemer.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tjenester Section -->
+    <section id="tjenester" class="services" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="services-heading">Tjenester</h2>
+        </div>
+        <div class="services-grid">
+          <a href="tjenester/ikt-infrastruktur.html" class="service-card-link">
+            <div class="service-card">
+              <h3>IKT-infrastruktur</h3>
+              <p>
+                I moderne utvikling av infrastruktur er smidig utvikling og DevOps nøkkelord for å
+                lykkes.
+              </p>
+              <span class="service-link">Les mer →</span>
+            </div>
+          </a>
+          <a href="tjenester/prosjektstyring.html" class="service-card-link">
+            <div class="service-card">
+              <h3>Prosjektstyring</h3>
+              <p>
+                Våre prosjektledere skaper engasjement og bidrar til effektivt samarbeid og
+                kommunikasjon i prosjekter.
+              </p>
+              <span class="service-link">Les mer →</span>
+            </div>
+          </a>
+          <a href="tjenester/informasjonssikkerhet.html" class="service-card-link">
+            <div class="service-card">
+              <h3>Informasjonssikkerhet</h3>
+              <p>
+                Integrering av sikkerhet i IKT-infrastruktur og systemutvikling. Vi tilbyr
+                risikovurderinger og sikkerhetstiltak for kritiske systemer.
+              </p>
+              <span class="service-link">Les mer →</span>
+            </div>
+          </a>
+          <a href="tjenester/emc.html" class="service-card-link">
+            <div class="service-card">
+              <h3>Elektromagnetisk kompatibilitet (EMC)</h3>
+              <p>
+                Med spisskompetanse innenfor EMC hjelper vi leverandører med å forstå, teste og
+                oppfylle militære krav til utstyr, systemer og fartøy.
+              </p>
+              <span class="service-link">Les mer →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team" aria-labelledby="team-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="team-heading">Team</h2>
+        </div>
+        <div class="team-grid">
+          <div class="team-member">
+            <div class="team-photo">
+              <img src="images/andreas-strom.jpg" alt="Andreas Strøm" loading="lazy" />
+            </div>
+            <div class="team-info">
+              <h3>Andreas Strøm</h3>
+              <p>
+                Systemarkitekt og utvikler med lang erfaring fra store infrastrukturprosjekter og
+                -programmer i offentlig og privat sektor. Andreas har spesialkompetanse på utvikling
+                og sikkerhetsgodkjenning av gradert infrastruktur, og har hjulpet virksomheter med
+                etablering av systemer for sikkerhetsgodkjenning av graderte informasjonssystemer.
+              </p>
+              <div class="team-contact">
+                <a href="mailto:andreas@synkope.io">andreas@synkope.io</a>
+                <a href="tel:+4790013765">900 13 765</a>
+                <a href="https://www.linkedin.com/in/andreas-strøm-06b0772/" target="_blank"
+                  >LinkedIn</a
                 >
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
+              </div>
             </div>
-        </nav>
+          </div>
 
-        <!-- Hero Section -->
-        <section id="hjem" class="hero" aria-labelledby="hero-title">
-            <div class="hero-container">
-                <div class="hero-content">
-                    <h1 id="hero-title" class="hero-title">
-                        Erfarne rådgivere<br />
-                        med spisskompetanse
-                    </h1>
-                    <p class="hero-subtitle">
-                        Synkope består av erfarne rådgivere med ulike
-                        kompetanseområder. Vi hjelper kunder i både privat og
-                        offentlig sektor med å løse komplekse utfordringer innen
-                        teknologi og prosjektledelse.
-                    </p>
-                </div>
-                <div class="hero-image">
-                    <!-- Placeholder for hero image -->
-                    <div class="hero-placeholder"></div>
-                </div>
+          <div class="team-member">
+            <div class="team-photo">
+              <img src="images/irene-driveklepp.jpg" alt="Irene Driveklepp" loading="lazy" />
             </div>
-        </section>
-
-        <!-- Om Oss Section -->
-        <section id="om" class="about" aria-labelledby="about-heading">
-            <div class="container">
-                <div class="section-header">
-                    <h2 id="about-heading">Om oss</h2>
-                </div>
-                <div class="about-content">
-                    <div class="about-section">
-                        <p>
-                            Vi tilbyr prosjektledelse med Prince2®- og
-                            SAFe-sertifiserte konsulenter som har erfaring fra
-                            hele verdikjeden.
-                        </p>
-                        <p>
-                            Våre tjenester inkluderer DevOps, smidig utvikling
-                            og modernisering av komplekse IKT-systemer,
-                            sikkerhetstiltak og risikovurderinger, samt
-                            anskaffelser og økonomistyring.
-                        </p>
-                        <p>
-                            Med ekspertise innenfor elektromagnetisk
-                            kompatibilitet (EMC) hjelper vi leverandører med å
-                            oppfylle militære krav til utstyr og systemer.
-                        </p>
-                    </div>
-                </div>
+            <div class="team-info">
+              <h3>Irene Driveklepp</h3>
+              <p>
+                Prosjektleder med lang erfaring fra anskaffelser, leveranseprosjekter og
+                overlevering til drift, hovedsakelig i offentlig forvaltning. Irene er utdannet
+                forvaltningsinformatiker fra Universitetet i Oslo.
+              </p>
+              <div class="team-contact">
+                <a href="mailto:irene@synkope.io">irene@synkope.io</a>
+                <a href="tel:+4793067085">930 67 085</a>
+                <a href="https://www.linkedin.com/in/irene-driveklepp-5a54ab/" target="_blank"
+                  >LinkedIn</a
+                >
+              </div>
             </div>
-        </section>
+          </div>
 
-        <!-- Tjenester Section -->
-        <section
-            id="tjenester"
-            class="services"
-            aria-labelledby="services-heading"
-        >
-            <div class="container">
-                <div class="section-header">
-                    <h2 id="services-heading">Tjenester</h2>
-                </div>
-                <div class="services-grid">
-                    <a
-                        href="tjenester/ikt-infrastruktur.html"
-                        class="service-card-link"
-                    >
-                        <div class="service-card">
-                            <h3>IKT-infrastruktur</h3>
-                            <p>
-                                I moderne utvikling av infrastruktur er smidig
-                                utvikling og DevOps nøkkelord for å lykkes.
-                            </p>
-                            <span class="service-link">Les mer →</span>
-                        </div>
-                    </a>
-                    <a
-                        href="tjenester/prosjektstyring.html"
-                        class="service-card-link"
-                    >
-                        <div class="service-card">
-                            <h3>Prosjektstyring</h3>
-                            <p>
-                                Våre prosjektledere skaper engasjement og bidrar
-                                til effektivt samarbeid og kommunikasjon i
-                                prosjekter.
-                            </p>
-                            <span class="service-link">Les mer →</span>
-                        </div>
-                    </a>
-                    <a
-                        href="tjenester/informasjonssikkerhet.html"
-                        class="service-card-link"
-                    >
-                        <div class="service-card">
-                            <h3>Informasjonssikkerhet</h3>
-                            <p>
-                                Integrering av sikkerhet i IKT-infrastruktur og
-                                systemutvikling. Vi tilbyr risikovurderinger og
-                                sikkerhetstiltak for kritiske systemer.
-                            </p>
-                            <span class="service-link">Les mer →</span>
-                        </div>
-                    </a>
-                    <a href="tjenester/emc.html" class="service-card-link">
-                        <div class="service-card">
-                            <h3>Elektromagnetisk kompatibilitet (EMC)</h3>
-                            <p>
-                                Med spisskompetanse innenfor EMC hjelper vi
-                                leverandører med å forstå, teste og oppfylle
-                                militære krav til utstyr, systemer og fartøy.
-                            </p>
-                            <span class="service-link">Les mer →</span>
-                        </div>
-                    </a>
-                </div>
+          <div class="team-member">
+            <div class="team-photo">
+              <img src="images/erik-straede.jpg" alt="Erik Stræde" loading="lazy" />
             </div>
-        </section>
-
-        <!-- Team Section -->
-        <section id="team" class="team" aria-labelledby="team-heading">
-            <div class="container">
-                <div class="section-header">
-                    <h2 id="team-heading">Team</h2>
-                </div>
-                <div class="team-grid">
-                    <div class="team-member">
-                        <div class="team-photo">
-                            <img
-                                src="images/andreas-strom.jpg"
-                                alt="Andreas Strøm"
-                                loading="lazy"
-                            />
-                        </div>
-                        <div class="team-info">
-                            <h3>Andreas Strøm</h3>
-                            <p>
-                                Systemarkitekt og utvikler med lang erfaring fra
-                                store infrastrukturprosjekter og -programmer i
-                                offentlig og privat sektor. Andreas har
-                                spesialkompetanse på utvikling og
-                                sikkerhetsgodkjenning av gradert infrastruktur,
-                                og har hjulpet virksomheter med etablering av
-                                systemer for sikkerhetsgodkjenning av graderte
-                                informasjonssystemer.
-                            </p>
-                            <div class="team-contact">
-                                <a href="mailto:andreas@synkope.io"
-                                    >andreas@synkope.io</a
-                                >
-                                <a href="tel:+4790013765">900 13 765</a>
-                                <a
-                                    href="https://www.linkedin.com/in/andreas-strøm-06b0772/"
-                                    target="_blank"
-                                    >LinkedIn</a
-                                >
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="team-member">
-                        <div class="team-photo">
-                            <img
-                                src="images/irene-driveklepp.jpg"
-                                alt="Irene Driveklepp"
-                                loading="lazy"
-                            />
-                        </div>
-                        <div class="team-info">
-                            <h3>Irene Driveklepp</h3>
-                            <p>
-                                Prosjektleder med lang erfaring fra
-                                anskaffelser, leveranseprosjekter og
-                                overlevering til drift, hovedsakelig i offentlig
-                                forvaltning. Irene er utdannet
-                                forvaltningsinformatiker fra Universitetet i
-                                Oslo.
-                            </p>
-                            <div class="team-contact">
-                                <a href="mailto:irene@synkope.io"
-                                    >irene@synkope.io</a
-                                >
-                                <a href="tel:+4793067085">930 67 085</a>
-                                <a
-                                    href="https://www.linkedin.com/in/irene-driveklepp-5a54ab/"
-                                    target="_blank"
-                                    >LinkedIn</a
-                                >
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="team-member">
-                        <div class="team-photo">
-                            <img
-                                src="images/erik-straede.jpg"
-                                alt="Erik Stræde"
-                                loading="lazy"
-                            />
-                        </div>
-                        <div class="team-info">
-                            <h3>Erik Stræde</h3>
-                            <p>
-                                Sertifisert prosjektleder fra Forsvaret, med
-                                bred erfaring fra flere komplekse anskaffelses-,
-                                utviklings- og implementeringsprosjekter. Erik
-                                har kompetanse på økonomi- og
-                                kontraktsoppfølging i store prosjekter.
-                            </p>
-                            <div class="team-contact">
-                                <a href="mailto:erik@synkope.io"
-                                    >erik@synkope.io</a
-                                >
-                                <a href="tel:+4790695540">906 95 540</a>
-                                <a
-                                    href="https://www.linkedin.com/in/erik-stræde-231681224/"
-                                    target="_blank"
-                                    >LinkedIn</a
-                                >
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="team-member">
-                        <div class="team-photo">
-                            <img
-                                src="images/torkell-bogstad.jpg"
-                                alt="Torkell Bogstad"
-                                loading="lazy"
-                            />
-                        </div>
-                        <div class="team-info">
-                            <h3>Torkell Bogstad</h3>
-                            <p>
-                                EMC-seniorrådgiver med bakgrunn fra Forsvaret.
-                                Torkell har bred kompetanse innenfor fagfeltet
-                                EMC, alt fra kravstilling og oppfølging av
-                                leverandører, til planlegging og gjennomføring
-                                av EMC-testing.
-                            </p>
-                            <div class="team-contact">
-                                <a href="mailto:torkell@synkope.io"
-                                    >torkell@synkope.io</a
-                                >
-                                <a href="tel:+4748213159">482 13 159</a>
-                                <a
-                                    href="https://www.linkedin.com/in/torkell-bogstad-49262282/"
-                                    target="_blank"
-                                    >LinkedIn</a
-                                >
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="team-info">
+              <h3>Erik Stræde</h3>
+              <p>
+                Sertifisert prosjektleder fra Forsvaret, med bred erfaring fra flere komplekse
+                anskaffelses-, utviklings- og implementeringsprosjekter. Erik har kompetanse på
+                økonomi- og kontraktsoppfølging i store prosjekter.
+              </p>
+              <div class="team-contact">
+                <a href="mailto:erik@synkope.io">erik@synkope.io</a>
+                <a href="tel:+4790695540">906 95 540</a>
+                <a href="https://www.linkedin.com/in/erik-stræde-231681224/" target="_blank"
+                  >LinkedIn</a
+                >
+              </div>
             </div>
-        </section>
+          </div>
 
-        <!-- Kompetanse og sertifiseringer -->
-        <section
-            id="kompetanse"
-            class="kompetanse"
-            aria-labelledby="kompetanse-heading"
-        >
-            <div class="container">
-                <div class="section-header">
-                    <h2 id="kompetanse-heading">Kompetanse</h2>
-                </div>
-                <div class="portfolio-grid">
-                    <div class="portfolio-item">
-                        <div
-                            class="portfolio-image portfolio-image-gradient"
-                        ></div>
-                        <div class="portfolio-content">
-                            <h3>Prince2® Sertifisert</h3>
-                            <p>
-                                Strukturert prosjektledelsesmetodikk for
-                                kontrollert prosjektgjennomføring
-                            </p>
-                        </div>
-                    </div>
-                    <div class="portfolio-item">
-                        <div
-                            class="portfolio-image portfolio-image-gradient"
-                        ></div>
-                        <div class="portfolio-content">
-                            <h3>SAFe Sertifisert</h3>
-                            <p>
-                                Scaled Agile Framework for store og komplekse
-                                utviklingsprosjekter
-                            </p>
-                        </div>
-                    </div>
-                    <div class="portfolio-item">
-                        <div
-                            class="portfolio-image portfolio-image-gradient"
-                        ></div>
-                        <div class="portfolio-content">
-                            <h3>DevOps og CI/CD</h3>
-                            <p>
-                                Moderne utvikling med infrastruktur som kode og
-                                automatiserte prosesser
-                            </p>
-                        </div>
-                    </div>
-                </div>
+          <div class="team-member">
+            <div class="team-photo">
+              <img src="images/torkell-bogstad.jpg" alt="Torkell Bogstad" loading="lazy" />
             </div>
-        </section>
-
-        <!-- Kontakt Section -->
-        <section id="kontakt" class="contact" aria-labelledby="contact-heading">
-            <div class="container">
-                <div class="section-header">
-                    <h2 id="contact-heading">Kontakt oss</h2>
-                </div>
-                <div class="contact-content">
-                    <div class="contact-form">
-                        <form
-                            id="kontaktskjema"
-                            aria-labelledby="contact-heading"
-                        >
-                            <div class="form-group">
-                                <label for="navn">Navn *</label>
-                                <input
-                                    type="text"
-                                    id="navn"
-                                    name="navn"
-                                    placeholder="Ditt fulle navn"
-                                    required
-                                    aria-required="true"
-                                />
-                            </div>
-                            <div class="form-group">
-                                <label for="epost">E-post *</label>
-                                <input
-                                    type="email"
-                                    id="epost"
-                                    name="epost"
-                                    placeholder="din@epost.no"
-                                    required
-                                    aria-required="true"
-                                />
-                            </div>
-                            <div class="form-group">
-                                <label for="emne">Emne *</label>
-                                <input
-                                    type="text"
-                                    id="emne"
-                                    name="emne"
-                                    placeholder="Hva gjelder henvendelsen?"
-                                    required
-                                    aria-required="true"
-                                />
-                            </div>
-                            <div class="form-group">
-                                <label for="melding">Melding *</label>
-                                <textarea
-                                    id="melding"
-                                    name="melding"
-                                    rows="5"
-                                    placeholder="Beskriv din henvendelse..."
-                                    required
-                                    aria-required="true"
-                                ></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">
-                                Send melding
-                            </button>
-                        </form>
-                    </div>
-                </div>
+            <div class="team-info">
+              <h3>Torkell Bogstad</h3>
+              <p>
+                EMC-seniorrådgiver med bakgrunn fra Forsvaret. Torkell har bred kompetanse innenfor
+                fagfeltet EMC, alt fra kravstilling og oppfølging av leverandører, til planlegging
+                og gjennomføring av EMC-testing.
+              </p>
+              <div class="team-contact">
+                <a href="mailto:torkell@synkope.io">torkell@synkope.io</a>
+                <a href="tel:+4748213159">482 13 159</a>
+                <a href="https://www.linkedin.com/in/torkell-bogstad-49262282/" target="_blank"
+                  >LinkedIn</a
+                >
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="container">
-                <div class="footer-content">
-                    <div class="footer-section">
-                        <h4>Kontakt</h4>
-                        <p>Synkope AS</p>
-                        <p>Solskinnsveien 6</p>
-                        <p>0376 Oslo</p>
-                        <p>Org. nr. 921 125 739</p>
-                        <p>
-                            <a href="mailto:post@synkope.io">post@synkope.io</a>
-                        </p>
-                    </div>
-                </div>
-                <div class="footer-bottom">
-                    <p>&copy; 2025 Synkope</p>
-                </div>
+    <!-- Kompetanse og sertifiseringer -->
+    <section id="kompetanse" class="kompetanse" aria-labelledby="kompetanse-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="kompetanse-heading">Kompetanse</h2>
+        </div>
+        <div class="portfolio-grid">
+          <div class="portfolio-item">
+            <div class="portfolio-image portfolio-image-gradient"></div>
+            <div class="portfolio-content">
+              <h3>Prince2® Sertifisert</h3>
+              <p>Strukturert prosjektledelsesmetodikk for kontrollert prosjektgjennomføring</p>
             </div>
-        </footer>
+          </div>
+          <div class="portfolio-item">
+            <div class="portfolio-image portfolio-image-gradient"></div>
+            <div class="portfolio-content">
+              <h3>SAFe Sertifisert</h3>
+              <p>Scaled Agile Framework for store og komplekse utviklingsprosjekter</p>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <div class="portfolio-image portfolio-image-gradient"></div>
+            <div class="portfolio-content">
+              <h3>DevOps og CI/CD</h3>
+              <p>Moderne utvikling med infrastruktur som kode og automatiserte prosesser</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <script src="js/script.js"></script>
-    </body>
+    <!-- Kontakt Section -->
+    <section id="kontakt" class="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="contact-heading">Kontakt oss</h2>
+        </div>
+        <div class="contact-content">
+          <div class="contact-form">
+            <form id="kontaktskjema" aria-labelledby="contact-heading">
+              <div class="form-group">
+                <label for="navn">Navn *</label>
+                <input
+                  type="text"
+                  id="navn"
+                  name="navn"
+                  placeholder="Ditt fulle navn"
+                  required
+                  aria-required="true" />
+              </div>
+              <div class="form-group">
+                <label for="epost">E-post *</label>
+                <input
+                  type="email"
+                  id="epost"
+                  name="epost"
+                  placeholder="din@epost.no"
+                  required
+                  aria-required="true" />
+              </div>
+              <div class="form-group">
+                <label for="emne">Emne *</label>
+                <input
+                  type="text"
+                  id="emne"
+                  name="emne"
+                  placeholder="Hva gjelder henvendelsen?"
+                  required
+                  aria-required="true" />
+              </div>
+              <div class="form-group">
+                <label for="melding">Melding *</label>
+                <textarea
+                  id="melding"
+                  name="melding"
+                  rows="5"
+                  placeholder="Beskriv din henvendelse..."
+                  required
+                  aria-required="true"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Send melding</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>Kontakt</h4>
+            <p>Synkope AS</p>
+            <p>Solskinnsveien 6</p>
+            <p>0376 Oslo</p>
+            <p>Org. nr. 921 125 739</p>
+            <p>
+              <a href="mailto:post@synkope.io">post@synkope.io</a>
+            </p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Synkope</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
 </html>
