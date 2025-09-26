@@ -18,7 +18,7 @@ class ServiceContentLoader {
       "ikt-infrastruktur": "ikt_infrastruktur",
       prosjektstyring: "prosjektstyring",
       informasjonssikkerhet: "informasjonssikkerhet",
-      emc: "emc"
+      emc: "emc",
     };
 
     return serviceMap[filename] || null;
@@ -288,7 +288,7 @@ class ServiceContentLoader {
         address: footerSection.children[2],
         postal: footerSection.children[3],
         org_number: footerSection.children[4],
-        email: footerSection.children[5]?.querySelector("a")
+        email: footerSection.children[5]?.querySelector("a"),
       };
 
       if (contactElements.company) {

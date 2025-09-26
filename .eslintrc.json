@@ -24,7 +24,7 @@
     "eqeqeq": "error",
     "curly": "error",
     "brace-style": ["warn", "1tbs", { "allowSingleLine": true }],
-    "comma-dangle": ["warn", "never"],
+    "comma-dangle": ["warn", "always-multiline"],
     "no-trailing-spaces": "warn",
     "eol-last": "warn",
     "space-before-function-paren": [

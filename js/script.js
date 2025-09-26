@@ -84,7 +84,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 
       window.scrollTo({
         top: offsetPosition,
-        behavior: "smooth"
+        behavior: "smooth",
       });
     }
     this.blur(); // Remove focus to prevent sticky border
@@ -118,7 +118,7 @@ window.addEventListener("scroll", () => {
 // Fade in animation on scroll
 const observerOptions = {
   threshold: 0.1,
-  rootMargin: "0px 0px -50px 0px"
+  rootMargin: "0px 0px -50px 0px",
 };
 
 const observer = new IntersectionObserver((entries) => {
@@ -132,7 +132,7 @@ const observer = new IntersectionObserver((entries) => {
 // Add fade-in class to elements and observe them
 document.addEventListener("DOMContentLoaded", () => {
   const fadeElements = document.querySelectorAll(
-    ".service-card, .portfolio-item, .stat, .about-text, .contact-item"
+    ".service-card, .portfolio-item, .stat, .about-text, .contact-item",
   );
 
   fadeElements.forEach((el) => {
@@ -182,7 +182,7 @@ if (contactForm) {
     setTimeout(() => {
       showMessage(
         "Takk for din henvendelse! Vi kommer tilbake til deg så snart som mulig.",
-        "success"
+        "success",
       );
       this.reset();
 
@@ -201,7 +201,7 @@ function validateForm({ navn, epost, emne, melding }) {
     return {
       isValid: false,
       message: "Navn må være minst 2 tegn langt.",
-      field: "navn"
+      field: "navn",
     };
   }
 
@@ -209,7 +209,7 @@ function validateForm({ navn, epost, emne, melding }) {
     return {
       isValid: false,
       message: "Vennligst skriv inn en gyldig e-postadresse.",
-      field: "epost"
+      field: "epost",
     };
   }
 
@@ -217,7 +217,7 @@ function validateForm({ navn, epost, emne, melding }) {
     return {
       isValid: false,
       message: "Emne må være minst 3 tegn langt.",
-      field: "emne"
+      field: "emne",
     };
   }
 
@@ -225,7 +225,7 @@ function validateForm({ navn, epost, emne, melding }) {
     return {
       isValid: false,
       message: "Melding må være minst 10 tegn lang.",
-      field: "melding"
+      field: "melding",
     };
   }
 
@@ -264,7 +264,7 @@ function showMessage(message, type) {
 function scrollToTop() {
   window.scrollTo({
     top: 0,
-    behavior: "smooth"
+    behavior: "smooth",
   });
 }
 
@@ -340,7 +340,7 @@ const statsObserver = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.5 }
+  { threshold: 0.5 },
 );
 
 document.addEventListener("DOMContentLoaded", () => {
